@@ -1,0 +1,135 @@
+ 
+/* ===============================
+   Global Styles for Elite Portfolio
+   =============================== */
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Color Palette & Typography */
+:root {
+  --bg-light: #F9FAFB;
+  --bg-lighter: #FFFFFF;
+  --card-light: #F3F4F6;
+  --text-dark: #1F2937;
+  --text-muted: #6B7280;
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-heavy: rgba(0, 0, 0, 0.25);
+}
+
+/* Base Layout */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-lighter);
+  color: var(--text-dark);
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* ===============================
+   Card & Container Styles
+   =============================== */
+.card {
+  background-color: var(--card-light);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px var(--shadow-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px var(--shadow-heavy);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* ===============================
+   Section Layout
+   =============================== */
+.section-container {
+  padding: 5rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* ===============================
+   Button Styles
+   =============================== */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--accent);
+  color: var(--bg-lighter);
+  box-shadow: 0 6px 12px var(--shadow-heavy);
+}
+
+/* ===============================
+   Animations
+   =============================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation-name: fadeInUp;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+/* Delay the animations for staggered appearance */
+.animate-fade-in-up:nth-child(2) { animation-delay: 0.2s; }
+.animate-fade-in-up:nth-child(3) { animation-delay: 0.4s; }
+.animate-fade-in-up:nth-child(4) { animation-delay: 0.6s; }
+.animate-fade-in-up:nth-child(5) { animation-delay: 0.8s; }
