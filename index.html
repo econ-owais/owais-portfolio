@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -167,7 +167,13 @@
           location: "Karachi, Pakistan",
           details: "Contributed to a 10-week summer internship, working closely with senior economists to support critical research and data analysis projects. Engineered and deployed an internal dashboard to visually track inflation and external sector trends, which was later integrated into internal reporting. Streamlined data cleaning and analysis processes for a financial inclusion study by applying expertise in R and SQL, significantly accelerating the preparation of monthly research briefs."
         },
-         
+        {
+          title: "Facilitator/Mentor",
+          institution: "Bacha Khan University Charsadda",
+          duration: "July 2024",
+          location: "Charsadda, Pakistan",
+          details: "Facilitated the International Conference on BRI, meticulously coordinating sessions and providing real-time support to speakers and panelists throughout the event to ensure a seamless and professional experience."
+        },
         {
           title: "Research Assistant",
           institution: "Bacha Khan University Charsadda",
@@ -321,7 +327,7 @@
             ${item.duration ? `<p class="text-gray-500 text-sm italic">${item.duration}</p>` : ''}
             ${item.location ? `<p class="text-gray-500 text-sm italic">${item.location}</p>` : ''}
             ${item.details ? `<p class="text-gray-600 mt-2">${item.details}</p>` : ''}
-            ${item.link ? `<a href="${item.link}" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm font-medium mt-3 inline-block">Verify Credential →</a>` : ''}
+            ${item.link ? `<a href="${item.link}" target="_blank" class="text-blue-600 hover:underline font-medium">Verify Credential →</a>` : ''}
           </div>
         `).join('');
       };
@@ -337,4 +343,3 @@
   </script>
 </body>
 </html>
-
