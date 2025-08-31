@@ -133,16 +133,37 @@
       const educationData = [
         {
           title: "Bachelor's in Economics",
-          institution: "Bacha Khan University Charsadda",
-          duration: "2021-2025",
+          institution: "Bacha Khan University, Charsadda",
+          duration: "2021–2025",
           location: "Charsadda, Pakistan",
-          details: `Final Grade: CGPA 3.5/4.00. Thesis: <a href="https://drive.google.com/file/d/1harwAm6_QGf-JVitg50jyX_ZOWtbXg1k/view?usp=drive_link" target="_blank" class="text-blue-600 hover:underline font-medium">Impact of Climate Change on Agriculture Production of Khyber Pakhtunkhwa</a>`
+          details: `Final Grade: CGPA 3.5/4.00. Thesis: <a href="https://drive.google.com/file/d/1harwAm6_QGf-JVitg50jyX_ZOWtbXg1k/view?usp=drive_link" target="_blank" class="text-blue-600 hover:underline font-medium">Impact of Climate Change on Agriculture Production of Khyber Pakhtunkhwa</a>`,
+          subjects: [
+            "Microeconomics & Macroeconomics",
+            "Econometrics & Statistical Analysis",
+            "Development Economics",
+            "Agricultural Economics",
+            "Public Finance & Fiscal Policy",
+            "International Trade & Global Markets",
+            "Environmental Economics",
+            "Mathematical Economics",
+            "Research Methodology",
+            "Pakistan Economy",
+            "Monetary Economics",
+            "Islamic Economics"
+          ]
         },
         {
-          title: "Intermediate Pre-Engineering",
-          institution: "Government Degree College Achni Payan Peshawar",
-          duration: "2019-2021",
-          location: "Peshawar, Pakistan"
+          title: "Intermediate in Pre-Engineering",
+          institution: "Government Degree College Achni Payan, Peshawar",
+          duration: "2019–2021",
+          location: "Peshawar, Pakistan",
+          details: ``,
+          subjects: [
+            "Mathematics",
+            "Physics",
+            "Chemistry",
+            "English"
+          ]
         },
         {
           title: "Matriculation",
@@ -170,11 +191,11 @@
           details: "Analyzed defense versus welfare spending through a comprehensive econometric analysis using Stata and R for a key policy brief. This work identified PKR 2.5M in potential annual savings, which was subsequently adopted by the Ministry. Collaborated with a 5-member team to present these findings to senior officials, directly contributing to the decisions for KP’s 2025 welfare budget."
         },
         {
-          title: "Facilitator/Mentor",
+          title: "Facilitator & Mentor",
           institution: "Bacha Khan University Charsadda",
-          duration: "July 2024",
+          duration: "July 29–31, 2024",
           location: "Charsadda, Pakistan",
-          details: "Facilitated the International Conference on BRI, meticulously coordinating sessions and providing real-time support to speakers and panelists throughout the event to ensure a seamless and professional experience."
+          details: "Facilitated the International Conference on Breakthroughs in Pakistan's Economic Development Through Technological Innovation in Agriculture – A Policy Approach. Coordinated sessions, supported speakers and panelists in real time, and ensured a smooth, professional experience across all three days. Mentored student volunteers, blending logistics with strategic guidance throughout the event."
         },
         {
           title: "Research Assistant",
@@ -322,16 +343,40 @@
       const generateSection = (containerId, data) => {
         const container = document.getElementById(containerId);
         if (!container) return;
-        container.innerHTML = data.map(item => `
-          <div class="card p-6 md:p-8 space-y-2">
-            <h3 class="text-2xl font-semibold text-gray-900">${item.title}</h3>
-            <p class="text-gray-700 font-medium">${item.institution ? item.institution : ''}</p>
-            ${item.duration ? `<p class="text-gray-500 text-sm italic">${item.duration}</p>` : ''}
-            ${item.location ? `<p class="text-gray-500 text-sm italic">${item.location}</p>` : ''}
-            ${item.details ? `<p class="text-gray-600 mt-2">${item.details}</p>` : ''}
-            ${item.link ? `<a href="${item.link}" target="_blank" class="text-blue-600 hover:underline font-medium">Verify Credential →</a>` : ''}
-          </div>
-        `).join('');
+        if (containerId === 'education-container') {
+          container.innerHTML = data.map(item => `
+            <div class="card p-6 md:p-8 space-y-4">
+              <div class="flex flex-col md:flex-row md:space-x-8">
+                <div class="flex-1">
+                  <h3 class="text-2xl font-semibold text-gray-900">${item.title}</h3>
+                  <p class="text-gray-700 font-medium">${item.institution}</p>
+                  ${item.duration ? `<p class="text-gray-500 text-sm italic">${item.duration}</p>` : ''}
+                  ${item.location ? `<p class="text-gray-500 text-sm italic">${item.location}</p>` : ''}
+                  ${item.details ? `<p class="text-gray-600 mt-4">${item.details}</p>` : ''}
+                </div>
+                ${item.subjects ? `
+                  <div class="flex-1 mt-4 md:mt-0">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">Core Subjects Studied:</h4>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                      ${item.subjects.map(subject => `<li>${subject}</li>`).join('')}
+                    </ul>
+                  </div>
+                ` : ''}
+              </div>
+            </div>
+          `).join('');
+        } else {
+          container.innerHTML = data.map(item => `
+            <div class="card p-6 md:p-8 space-y-2">
+              <h3 class="text-2xl font-semibold text-gray-900">${item.title}</h3>
+              <p class="text-gray-700 font-medium">${item.institution ? item.institution : ''}</p>
+              ${item.duration ? `<p class="text-gray-500 text-sm italic">${item.duration}</p>` : ''}
+              ${item.location ? `<p class="text-gray-500 text-sm italic">${item.location}</p>` : ''}
+              ${item.details ? `<p class="text-gray-600 mt-2">${item.details}</p>` : ''}
+              ${item.link ? `<a href="${item.link}" target="_blank" class="text-blue-600 hover:underline font-medium">Verify Credential →</a>` : ''}
+            </div>
+          `).join('');
+        }
       };
 
       // Generate content for each section in the new order
