@@ -1006,3 +1006,124 @@ p {
   display: flex;
   align-items: center;
   justify-content: center
+/* Add to your existing style.css */
+
+/* Featured Project Styling */
+.featured-project {
+  border: 3px solid #2563EB !important;
+  background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%) !important;
+  position: relative;
+}
+
+.ribbon {
+  position: absolute;
+  top: 10px;
+  right: -5px;
+  background: #DC2626;
+  color: white;
+  padding: 5px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+/* Button Styles */
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #2563EB;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #1D4ED8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  background: white;
+  color: #2563EB;
+  border: 2px solid #2563EB;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: #2563EB;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #2563EB;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  background: #1D4ED8;
+  transform: scale(1.1);
+}
+
+#backToTop.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hover Lift Effect */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Pulse Animation for NEW Badge */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Card Enhancements */
+.card {
+  background-color: #F3F4F6;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
