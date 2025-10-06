@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Owais Ali Shah — Data Scientist & Economist | Portfolio</title>
+  <meta name="description" content="Economics graduate specializing in data analytics, policy research, and econometrics. Explore my projects, certifications, and research work.">
+  <meta name="keywords" content="Data Scientist, Economist, Data Analytics, Policy Research, Econometrics, Pakistan">
+  <meta name="author" content="Owais Ali Shah">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://econ-owais.github.io/">
+  <meta property="og:title" content="Owais Ali Shah — Data Scientist & Economist">
+  <meta property="og:description" content="Economics graduate specializing in data analytics, policy research, and econometrics.">
+  <meta property="og:image" content="https://econ-owais.github.io/assets/preview.jpg">
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Owais Ali Shah — Data Scientist & Economist">
+  <meta name="twitter:description" content="Economics graduate specializing in data analytics, policy research, and econometrics.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 leading-relaxed">
+
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loader">
+      <div class="loader-inner">
+        <div class="loader-circle"></div>
+        <div class="loader-text">OA</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
+    <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+      <a href="#hero" class="text-xl font-bold text-blue-600 hover:text-blue-700 transition-colors">Owais Ali Shah</a>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6 items-center">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#stats" class="nav-link">Stats</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#stats" class="mobile-nav-link">Stats</a>
+      <a href="#skills" class="mobile-nav-link">Skills</a>
+      <a href="#experience" class="mobile-nav-link">Experience</a>
+      <a href="#projects" class="mobile-nav-link">Projects</a>
+      <a href="#certifications" class="mobile-nav-link">Certifications</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Particles Background -->
+  <header id="hero" class="hero-section">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <div class="hero-badge" data-aos="fade-down">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+        Owais Ali Shah
+      </h1>
+      <div class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+        <span id="typed-text"></span>
+      </div>
+      <p class="hero-description" data-aos="fade-up" data-aos-delay="600">
+        Transforming data into actionable insights for policy and economic development
+      </p>
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="800">
+        <a href="#projects" class="btn-primary">
+          <i class="fas fa-folder-open mr-2"></i> View My Work
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <i class="fas fa-envelope mr-2"></i> Get in Touch
+        </a>
+      </div>
+      <div class="hero-scroll" data-aos="fade-up" data-aos-delay="1000">
+        <a href="#stats" class="scroll-indicator">
+          <span>Scroll Down</span>
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 md:px-8 lg:px-12 py-12">
+
+    <!-- Statistics Dashboard -->
+    <section id="stats" class="stats-section" data-aos="fade-up">
+      <h2 class="section-title">Achievements at a Glance</h2>
+      <div class="stats-grid">
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="stat-icon">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <div class="stat-number" data-target="10">0</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="stat-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <div class="stat-number" data-target="150">0</div>
+          <div class="stat-label">Certifications Earned</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="stat-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div class="stat-number" data-target="4">0</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="stat-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-label">Research Papers</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="section-container" data-aos="fade-up">
+      <h2 class="section-title">About Me</h2>
+      <div class="card p-8 text-center max-w-4xl mx-auto space-y-4">
+        <p class="text-lg text-gray-700">I chose economics because I wanted to understand how systems work — how decisions ripple through communities, how policies shape lives, and how data can tell stories that matter. It wasn't just theory for me; I wanted to use it to fix things, build smarter tools, and make public services actually serve.</p>
+        <p class="text-lg text-gray-700">Along the way, I picked up tech skills that helped me turn ideas into action. With R, Stata, and Shiny, I started building dashboards, mapping flood risks, and analyzing budgets for central banks and government teams. I've worked on everything from welfare planning to transport systems — always focused on clarity, impact, and real-world use.</p>
+        <p class="text-lg text-gray-700">I care about making things simple, sharp, and accessible. Whether it's a policy report or a public-facing app, I push every detail until it works for everyone. Outside the data world, I've led student teams, mentored others, and helped communities during floods. For me, it's all connected — economics, tech, design, and outreach.</p>
+        <p class="text-lg text-gray-700 font-semibold">This is more than a career. It's how I build things that matter.</p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-container" data-aos="fade-up">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category" data-aos="fade-right" data-aos-delay="100">
+          <h3 class="skill-category-title">
+            <i class="fas fa-chart-line"></i> Data Analysis & Statistics
+          </h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Statistical Software (STATA, R, SPSS, EViews)</span>
+              <span class="skill-percentage">95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="95"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Econometric Modeling</span>
+              <span class="skill-percentage">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="90"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-right" data-aos-delay="200">
+          <h3 class="skill-category-title">
+            <i class="fas fa-chart-bar"></i> Data Visualization
+          </h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Power BI</span>
+              <span class="skill-percentage">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="90"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Tableau</span>
+              <span class="skill-percentage">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="85"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-right" data-aos-delay="300">
+          <h3 class="skill-category-title">
+            <i class="fas fa-code"></i> Programming
+          </h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Python</span>
+              <span class="skill-percentage">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="75"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-right" data-aos-delay="400">
+          <h3 class="skill-category-title">
+            <i class="fas fa-tasks"></i> Management
+          </h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Project Management</span>
+              <span class="skill-percentage">88%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="88"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="section-container" data-aos="fade-up">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">June 2025 - August 2025</div>
+            <h3 class="timeline-title">Summer Internship</h3>
+            <div class="timeline-company">State Bank of Pakistan • Peshawar, Pakistan</div>
+            <p class="timeline-description">Worked alongside economists and HR strategists at SBP during a six-week internship focused on hiring systems, team structures, and institutional workflows. Contributed to discussions on talent acquisition and public-sector performance, gaining early exposure to how national policy is shaped from the inside.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">January 2025 - February 2025</div>
+            <h3 class="timeline-title">Intern – Economic Research and Policy Analysis</h3>
+            <div class="timeline-company">Inter-Services Public Relations (ISPR), Ministry of Pakistan • Peshawar</div>
+            <p class="timeline-description">Analyzed defense versus welfare spending through comprehensive econometric analysis using Stata and R for a key policy brief. Identified PKR 2.5M in potential annual savings, which was subsequently adopted by the Ministry. Collaborated with a 5-member team to present findings to senior officials.</p>
+            <div class="timeline-achievements">
+              <span class="achievement-badge"><i class="fas fa-check-circle"></i> PKR 2.5M Savings Identified</span>
+              <span class="achievement-badge"><i class="fas fa-check-circle"></i> Policy Brief Adopted</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">July 2024</div>
+            <h3 class="timeline-title">Facilitator & Mentor</h3>
+            <div class="timeline-company">Bacha Khan University Charsadda • Charsadda, Pakistan</div>
+            <p class="timeline-description">Facilitated the International Conference on Breakthroughs in Pakistan's Economic Development Through Technological Innovation in Agriculture. Coordinated sessions, supported speakers and panelists, and mentored student volunteers throughout the three-day event.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">December 2023 - April 2024</div>
+            <h3 class="timeline-title">Research Assistant</h3>
+            <div class="timeline-company">Bacha Khan University Charsadda • Charsadda, Pakistan</div>
+            <p class="timeline-description">Assisted in flood mitigation research project focusing on high-risk data for the Charsadda region. Managed end-to-end data lifecycle, including reviewing and cleaning datasets, conducting in-depth analysis, and supporting background research using Stata, R, and Tableau.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">June 2023 - August 2023</div>
+            <h3 class="timeline-title">Intern - Development and Project Management</h3>
+            <div class="timeline-company">Building Control Authority (BCA), TMA Karak • Karak, Pakistan</div>
+            <p class="timeline-description">Collaborated with the district architect on the Karak Area Development Project, performing detailed cost and benefit analyses. Managed project progress by tracking construction schedules and ensuring alignment with project blueprints.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">January 2022 - July 2022</div>
+            <h3 class="timeline-title">Intern - Data Analyst</h3>
+            <div class="timeline-company">Wilayat Khan Wazir Construction Company • Peshawar, Pakistan</div>
+            <p class="timeline-description">Redesigned bus schedules based on detailed study of commuter travel patterns using Stata. Optimized routes around peak hours and passenger demand, resulting in 15% reduction in operating costs and 20% decrease in delays.</p>
+            <div class="timeline-achievements">
+              <span class="achievement-badge"><i class="fas fa-check-circle"></i> 15% Cost Reduction</span>
+              <span class="achievement-badge"><i class="fas fa-check-circle"></i> 20% Fewer Delays</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic Projects Section -->
+    <section id="projects" class="section-container" data-aos="fade-up">
+      <h2 class="section-title">Featured Projects</h2>
+      
+      <!-- Filter Buttons -->
+      <div class="project-filters" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="climate">Climate & Risk</button>
+        <button class="filter-btn" data-filter="economics">Economics</button>
+        <button class="filter-btn" data-filter="development">Development</button>
+      </div>
+
+      <div id="projects-container" class="projects-grid">
+        <!-- Projects will be dynamically inserted here -->
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section-container" data-aos="fade-up">
+      <h2 class="section-title">Publications & Research</h2>
+      <div class="publications-grid">
+        <div class="publication-card" data-aos="flip-left">
+          <div class="publication-status">Under Review</div>
+          <h3 class="publication-title">Inflation and Economic Growth in Pakistan, 2010–2024</h3>
+          <p class="publication-subtitle">Threshold Evidence and Policy Implications</p>
+          <p class="publication-journal">Submitted to peer-reviewed journal</p>
+          <div class="publication-actions">
+            <a href="https://drive.google.com/file/d/1wMOiKw71_BioehZu_S1HItQviAyvdMOA/view?usp=sharing" target="_blank" class="publication-btn">
+              <i class="fas fa-file-pdf"></i> View Paper
+            </a>
+          </div>
+        </div>
+
+        <div class="publication-card" data-aos="flip-left" data-aos-delay="100">
+          <div class="publication-status">Under Review</div>
+          <h3 class="publication-title">Impact of Population Growth on Health and Education in Pakistan</h3>
+          <p class="publication-journal">Submitted to peer-reviewed journal</p>
+          <div class="publication-actions">
+            <a href="https://drive.google.com/file/d/1Mfd1FTtzxE8euHJfZHW6prOEXLg-bRRH/view?usp=drive_link" target="_blank" class="publication-btn">
+              <i class="fas fa-file-pdf"></i> View Paper
+            </a>
+          </div>
+        </div>
+
+        <div class="publication-card" data-aos="flip-left" data-aos-delay="200">
+          <div class="publication-status published">Published</div>
+          <h3 class="publication-title">17th South Asian Economics Student's Meet</h3>
+          <p class="publication-subtitle">Impact of Energy Crises on Pakistan's Economy</p>
+          <p class="publication-journal">Bacha Khan University, December 2021</p>
+          <div class="publication-actions">
+            <a href="https://drive.google.com/file/d/1lCS8Jkk9-S5z87zFHiBaZeFHDHin9bne/view?usp=drive_link" target="_blank" class="publication-btn">
+              <i class="fas fa-file-pdf"></i> View Paper
+            </a>
+            <a href="https://econ-owais.github.io/SAESM-Research-paper/" target="_blank" class="publication-btn secondary">
+              <i class="fas fa-external-link-alt"></i> View Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section-container" data-aos="fade-up">
+      <h2 class="section-title">Certifications</h2>
+      <p class="text-center text-gray-600 mb-8">Showcasing top certifications from leading institutions</p>
+      <div id="certifications-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Certifications will be dynamically inserted here -->
+      </div>
+      <div class="text-center mt-10" data-aos="fade-up">
+        <a href="certifications.html" class="btn-primary">
+          <i class="fas fa-award mr-2"></i> View All 150+ Certifications
+        </a>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-container testimonials-section" data-aos="fade-up">
+      <h2 class="section-title">What People Say</h2>
+      <div class="testimonials-slider">
+        <div class="testimonial-card" data-aos="zoom-in">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Owais demonstrated exceptional analytical skills and dedication throughout our research project. His ability to transform complex data into actionable insights was truly impressive."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="author-info">
+              <div class="author-name">Dr. Research Supervisor</div>
+              <div class="author-title">Bacha Khan University</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Working with Owais on the policy analysis was a great experience. His econometric modeling skills and attention to detail helped us identify significant cost savings for the ministry."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="author-info">
+              <div class="author-name">Team Lead</div>
+              <div class="author-title">ISPR, Ministry of Pakistan</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Owais showed great initiative and professionalism during his internship. His contributions to our economic research and data analysis were valuable to the team."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="author-info">
+              <div class="author-name">Senior Mentor</div>
+              <div class="author-title">State Bank of Pakistan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Contact Section -->
+  <footer id="contact" class="contact-section" data-aos="fade-up">
+    <div class="container mx-auto px-4 md:px-8 lg:px-12">
+      <h2 class="section-title text-white">Get in Touch</h2>
+      <p class="text-center text-gray-300 mb-12">Let's discuss data, economics, or policy research</p>
+      
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-container" data-aos="fade-right">
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="name"><i class="fas fa-user"></i> Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name">
+              <span class="form-error" id="name-error"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="email"><i class="fas fa-envelope"></i> Email</label>
+              <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+              <span class="form-error" id="email-error"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+              <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+              <span class="form-error" id="subject-error"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="message"><i class="fas fa-comment"></i> Message</label>
+              <textarea id="message" name="message" required rows="5" placeholder="Your message here..." minlength="10"></textarea>
+              <span class="form-error" id="message-error"></span>
+            </div>
+            
+            <button type="submit" class="btn-primary w-full">
+              <i class="fas fa-paper-plane mr-2"></i> Send Message
+            </button>
+          </form>
+          <div id="form-success" class="form-success hidden">
+            <i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you soon.
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info" data-aos="fade-left">
+          <div class="contact-info-card">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p>owais.ali.shah.econ@gmail.com</p>
+            <button class="copy-btn" data-copy="owais.ali.shah.econ@gmail.com">
+              <i class="fas fa-copy"></i> Copy
+            </button>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Response Time</h3>
+            <p>Typically responds within 24 hours</p>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Location</h3>
+            <p>Charsadda, Khyber Pakhtunkhwa, Pakistan</p>
+          </div>
+
+          <div class="social-links">
+            <a href="https://linkedin.com/in/owaisali-econ" target="_blank" class="social-link" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/econ-owais" target="_blank" class="social-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:owais.ali.shah.econ@gmail.com" class="social-link" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Owais Ali Shah. All rights reserved.</p>
+        <p class="mt-2">Built with passion for data and policy research</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Action Buttons -->
+  <button id="scroll-to-top" class="floating-btn scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <button id="floating-theme-toggle" class="floating-btn theme-toggle-floating" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.6.0/countUp.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <script src="portfolio.js"></script>
+
+</body>
+</html>
