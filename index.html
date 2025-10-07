@@ -1,214 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Owais Ali Shah — Data Scientist & Economist</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Owais Ali Shah — Data Scientist & Economist | Portfolio</title>
   
-  <!-- Critical Meta Tags -->
-  <meta name="description" content="Economics graduate specializing in data analytics, policy research, and econometrics. Explore projects, certifications, and research.">
-  <meta name="theme-color" content="#2563EB">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Economics graduate specializing in data analytics, policy research, and econometrics. View projects, 150+ certifications, and research work.">
+  <meta name="keywords" content="Data Scientist, Economist, Data Analytics, Policy Research, Econometrics, Pakistan, Portfolio">
+  <meta name="author" content="Owais Ali Shah">
   
-  <!-- Preconnect for faster loading -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Owais Ali Shah — Data Scientist & Economist">
+  <meta property="og:description" content="Economics graduate specializing in data analytics and policy research">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts - Preload for speed -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   
-  <!-- Critical CSS (Inline for instant render) -->
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
   <style>
-    /* Critical CSS - Loads instantly */
+    /* Ultra-Premium Styles - Optimized for Speed */
     :root {
       --primary: #2563EB;
       --secondary: #1D4ED8;
-      --bg: #FFFFFF;
-      --text: #1F2937;
-      --gray: #6B7280;
+      --accent: #3B82F6;
     }
-    
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
     }
     
-    /* Loading Screen */
-    .loading {
-      position: fixed;
-      inset: 0;
-      background: #fff;
-      display: flex;
+    h1, h2, h3, h4 {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    /* Premium Gradient Background */
+    .hero-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-gradient::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: float 20s linear infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50px, 50px); }
+    }
+    
+    /* Premium Card Styles */
+    .premium-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(37, 99, 235, 0.1);
+    }
+    
+    .premium-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+    }
+    
+    /* Stats Counter Animation */
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+    }
+    
+    /* Featured Project Badge */
+    .featured-badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    /* Premium Button */
+    .btn-premium {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      transition: opacity 0.3s;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
     }
     
-    .loading.hide { opacity: 0; pointer-events: none; }
+    .btn-premium:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(37, 99, 235, 0.4);
+    }
     
-    .spinner {
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
       width: 50px;
       height: 50px;
-      border: 4px solid #f0f0f0;
-      border-top-color: var(--primary);
+      background: var(--primary);
+      color: white;
       border-radius: 50%;
-      animation: spin 0.8s linear infinite;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+      transition: all 0.3s ease;
+      z-index: 1000;
     }
     
-    @keyframes spin {
-      to { transform: rotate(360deg); }
+    .back-to-top.show {
+      display: flex;
+    }
+    
+    .back-to-top:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6);
+    }
+    
+    /* Skill Tags */
+    .skill-tag {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      display: inline-block;
+      margin: 0.25rem;
+      transition: all 0.3s ease;
+    }
+    
+    .skill-tag:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+    
+    /* Timeline Styles */
+    .timeline {
+      position: relative;
+      padding-left: 3rem;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0.5rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--primary), var(--accent));
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    
+    .timeline-dot {
+      position: absolute;
+      left: -2.5rem;
+      width: 1rem;
+      height: 1rem;
+      background: var(--primary);
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .stat-number {
+        font-size: 2rem;
+      }
+      .timeline {
+        padding-left: 2rem;
+      }
+      .timeline-dot {
+        left: -1.75rem;
+      }
     }
   </style>
-  
-  <!-- Non-critical CSS (Loads after page renders) -->
-  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="style.css"></noscript>
-  
-  <!-- Optimized Google Fonts (Only 2 weights) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-  <!-- Loading Screen -->
-  <div class="loading" id="loading">
-    <div class="spinner"></div>
-  </div>
-
-  <!-- Navigation -->
-  <nav id="nav">
-    <div class="container nav-container">
-      <a href="#" class="logo">Owais Ali Shah</a>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <!-- Hero Section -->
-  <section id="hero">
-    <div class="container hero-content">
-      <span class="badge">✨ Available for opportunities</span>
-      <h1>Owais Ali Shah</h1>
-      <p class="subtitle">
-        <span class="typing">Data Scientist | Economist | Policy Researcher</span>
+  <header class="hero-gradient min-h-screen flex items-center justify-center text-center text-white px-4">
+    <div class="relative z-10 space-y-8 animate-fade-in">
+      <div class="inline-block bg-white bg-opacity-20 backdrop-blur-sm px-6 py-2 rounded-full text-sm font-semibold mb-4">
+        <span class="inline-block w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+        Available for Opportunities
+      </div>
+      <h1 class="text-5xl sm:text-7xl font-extrabold mb-4">Owais Ali Shah</h1>
+      <p class="text-2xl sm:text-3xl font-medium mb-2">Economics Graduate | Data Analyst | Policy Researcher</p>
+      <p class="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
+        Transforming data into actionable insights for policy and economic development
       </p>
-      <p class="desc">Transforming data into actionable insights for policy and economic development</p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#projects" class="btn-premium">
+          <i class="fas fa-folder-open"></i> View My Work
+        </a>
+        <a href="#contact" class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all">
+          <i class="fas fa-envelope mr-2"></i> Contact Me
+        </a>
+      </div>
+      <div class="mt-12 animate-bounce">
+        <a href="#stats" class="text-white text-3xl">
+          <i class="fas fa-chevron-down"></i>
+        </a>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- Stats Section -->
-  <section id="stats" class="section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-icon">📊</div>
-          <div class="stat-number" data-count="10">0</div>
-          <div class="stat-label">Projects</div>
+  <!-- Statistics Section -->
+  <section id="stats" class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Achievements at a Glance</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="premium-card p-8 text-center">
+          <i class="fas fa-project-diagram text-5xl text-blue-600 mb-4"></i>
+          <div class="stat-number" data-target="8">0</div>
+          <div class="text-gray-600 font-semibold mt-2">Projects Completed</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-icon">🏆</div>
-          <div class="stat-number" data-count="150">0</div>
-          <div class="stat-label">Certifications</div>
+        <div class="premium-card p-8 text-center">
+          <i class="fas fa-certificate text-5xl text-purple-600 mb-4"></i>
+          <div class="stat-number" data-target="150">0</div>
+          <div class="text-gray-600 font-semibold mt-2">Certifications</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-icon">📅</div>
-          <div class="stat-number" data-count="4">0</div>
-          <div class="stat-label">Years Experience</div>
+        <div class="premium-card p-8 text-center">
+          <i class="fas fa-briefcase text-5xl text-green-600 mb-4"></i>
+          <div class="stat-number" data-target="5">0</div>
+          <div class="text-gray-600 font-semibold mt-2">Years Experience</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-icon">📄</div>
-          <div class="stat-number" data-count="3">0</div>
-          <div class="stat-label">Research Papers</div>
+        <div class="premium-card p-8 text-center">
+          <i class="fas fa-file-alt text-5xl text-red-600 mb-4"></i>
+          <div class="stat-number" data-target="3">0</div>
+          <div class="text-gray-600 font-semibold mt-2">Research Papers</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="card about-card">
-        <p>I chose economics to understand how systems work—how decisions ripple through communities, policies shape lives, and data tells stories that matter. It wasn't just theory; I wanted to fix things, build smarter tools, and make public services actually serve.</p>
-        <p>With R, Stata, and Shiny, I've built dashboards, mapped flood risks, and analyzed budgets for central banks and government teams—always focused on clarity, impact, and real-world use.</p>
-        <p><strong>This is more than a career. It's how I build things that matter.</strong></p>
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">About Me</h2>
+      <div class="premium-card p-8 text-center space-y-6 text-lg text-gray-700 leading-relaxed">
+        <p>I chose economics because I wanted to understand how systems work — how decisions ripple through communities, how policies shape lives, and how data can tell stories that matter. It wasn't just theory for me; I wanted to use it to fix things, build smarter tools, and make public services actually serve.</p>
+        <p>Along the way, I picked up tech skills that helped me turn ideas into action. With R, Stata, and Shiny, I started building dashboards, mapping flood risks, and analyzing budgets for central banks and government teams. I've worked on everything from welfare planning to transport systems — always focused on clarity, impact, and real-world use.</p>
+        <p>I care about making things simple, sharp, and accessible. Whether it's a policy report or a public-facing app, I push every detail until it works for everyone. Outside the data world, I've led student teams, mentored others, and helped communities during floods. For me, it's all connected — economics, tech, design, and outreach.</p>
+        <p class="font-bold text-blue-600">This is more than a career. It's how I build things that matter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Technical Skills</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="skill-tag"><i class="fas fa-chart-line mr-2"></i>Statistical Software (STATA, R, SPSS, EViews)</span>
+        <span class="skill-tag"><i class="fas fa-chart-bar mr-2"></i>Power BI</span>
+        <span class="skill-tag"><i class="fab fa-python mr-2"></i>Python</span>
+        <span class="skill-tag"><i class="fas fa-chart-pie mr-2"></i>Tableau</span>
+        <span class="skill-tag"><i class="fas fa-calculator mr-2"></i>Econometric Modeling</span>
+        <span class="skill-tag"><i class="fas fa-tasks mr-2"></i>Project Management</span>
+        <span class="skill-tag"><i class="fas fa-database mr-2"></i>SQL</span>
+        <span class="skill-tag"><i class="fab fa-github mr-2"></i>GitHub</span>
+        <span class="skill-tag"><i class="fas fa-brain mr-2"></i>Critical Thinking</span>
+        <span class="skill-tag"><i class="fas fa-users mr-2"></i>Team Collaboration</span>
+        <span class="skill-tag"><i class="fas fa-pen mr-2"></i>Written Communication</span>
+        <span class="skill-tag"><i class="fas fa-lightbulb mr-2"></i>Strategic Decision Making</span>
       </div>
     </div>
   </section>
 
   <!-- Experience Section -->
-  <section id="experience" class="section bg-gray">
-    <div class="container">
-      <h2 class="section-title">Experience</h2>
-      <div id="experience-container"></div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
-      <div id="projects-container"></div>
-    </div>
-  </section>
-
-  <!-- Certifications Section -->
-  <section id="certifications" class="section bg-gray">
-    <div class="container">
-      <h2 class="section-title">Certifications</h2>
-      <p class="text-center">Top certifications from leading institutions</p>
-      <div id="certifications-container"></div>
-      <div class="text-center mt-4">
-        <a href="certifications.html" class="btn btn-primary">View All 150+ Certifications</a>
+  <section id="experience" class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Professional Experience</h2>
+      <div class="timeline" id="experience-container">
+        <!-- Populated by JavaScript -->
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <h2 class="section-title text-white">Get in Touch</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>📧 Email</h3>
-          <p>owais.ali.shah.econ@gmail.com</p>
-          <button class="copy-btn" onclick="copyEmail()">Copy</button>
+  <!-- Education Section -->
+  <section id="education" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Education</h2>
+      <div class="space-y-6" id="education-container">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Featured Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section id="publications" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Publications & Research</h2>
+      <div class="space-y-6">
+        <div class="premium-card p-8">
+          <div class="inline-block bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full text-sm font-semibold mb-4">Under Review</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Inflation and Economic Growth in Pakistan, 2010–2024</h3>
+          <p class="text-gray-600 mb-4">Threshold Evidence and Policy Implications</p>
+          <p class="text-sm text-gray-500 mb-4">Submitted to peer-reviewed journal</p>
+          <a href="https://drive.google.com/file/d/1wMOiKw71_BioehZu_S1HItQviAyvdMOA/view?usp=sharing" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">
+            <i class="fas fa-file-pdf mr-2"></i>View Paper →
+          </a>
         </div>
-        <div class="contact-info">
-          <h3>🔗 Social</h3>
-          <div class="social-links">
-            <a href="https://linkedin.com/in/owaisali-econ" target="_blank">LinkedIn</a>
-            <a href="https://github.com/econ-owais" target="_blank">GitHub</a>
+        <div class="premium-card p-8">
+          <div class="inline-block bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full text-sm font-semibold mb-4">Under Review</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Impact of Population Growth on Health and Education in Pakistan</h3>
+          <p class="text-sm text-gray-500 mb-4">Submitted to peer-reviewed journal</p>
+          <a href="https://drive.google.com/file/d/1Mfd1FTtzxE8euHJfZHW6prOEXLg-bRRH/view?usp=drive_link" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">
+            <i class="fas fa-file-pdf mr-2"></i>View Paper →
+          </a>
+        </div>
+        <div class="premium-card p-8">
+          <div class="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm font-semibold mb-4">Published</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">17th South Asian Economics Student's Meet</h3>
+          <p class="text-gray-600 mb-4">Impact of Energy Crises on Pakistan's Economy</p>
+          <p class="text-sm text-gray-500 mb-4">Bacha Khan University, December 2021</p>
+          <div class="flex gap-4">
+            <a href="https://drive.google.com/file/d/1lCS8Jkk9-S5z87zFHiBaZeFHDHin9bne/view?usp=drive_link" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">
+              <i class="fas fa-file-pdf mr-2"></i>View Paper →
+            </a>
+            <a href="https://econ-owais.github.io/SAESM-Research-paper/" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">
+              <i class="fas fa-external-link-alt mr-2"></i>View Demo →
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Back to Top Button -->
-  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+  <!-- Leadership Section -->
+  <section id="leadership" class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Leadership & Volunteering</h2>
+      <div class="space-y-6" id="leadership-container">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+  </section>
 
-  <!-- Optimized JavaScript (Inline & Fast) -->
-  <script src="portfolio-optimized.js" defer></script>
-  
-  <script>
-    // Hide loading screen when page loads
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.getElementById('loading').classList.add('hide');
-      }, 300);
-    });
-  </script>
+  <!-- Certifications Section -->
+  <section id="certifications" class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">Certifications</h2>
+      <p class="text-center text-gray-600 mb-12 text-lg">Showcasing top certifications from leading institutions</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="certifications-container">
+        <!-- Populated by JavaScript -->
+      </div>
+      <div class="text-center mt-12">
+        <a href="certifications.html" class="btn-premium">
+          <i class="fas fa-award"></i> View All 150+ Certifications
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <footer id="contact" class="py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
+      <p class="text-xl mb-12 text-gray-200">Let's discuss data, economics, or policy research</p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+        <a href="mailto:owais.ali.shah.econ@gmail.com" class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all inline-flex items-center justify-center gap-2">
+          <i class="fas fa-envelope"></i> Email Me
+        </a>
+        <a href="https://linkedin.com/in/owaisali-econ" target="_blank" class="bg-white bg-opacity-20 backdrop-blur-sm px-8 py-4 rounded-full font-bold hover:bg-opacity-30 transition-all inline-flex items-center justify-center gap-2">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/econ-owais" target="_blank" class="bg-white bg-opacity-20 backdrop-blur-sm px-8 py-4 rounded-full font-bold hover:bg-opacity-30 transition-all inline-flex items-center justify-center gap-2">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="border-t border-white border-opacity-20 pt-8">
+        <p class="text-gray-200">&copy; 2025 Owais Ali Shah. All rights reserved.</p>
+        <p class="text-gray-300 mt-2">Built with passion for data and policy research</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="portfolio.js"></script>
 
 </body>
 </html>
