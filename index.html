@@ -208,6 +208,78 @@
       box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
     }
     
+    /* Card Styles for Dynamic Content */
+    .card {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(37, 99, 235, 0.08);
+    }
+    
+    .card.hover-lift:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.15);
+    }
+    
+    /* Button Styles for Dynamic Content */
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      display: inline-block;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    }
+    
+    .btn-secondary {
+      background: white;
+      color: var(--primary);
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      display: inline-block;
+      text-decoration: none;
+      border: 2px solid var(--primary);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+    }
+    
+    /* Featured Project Styles */
+    .featured-project {
+      position: relative;
+      border: 2px solid var(--primary);
+      background: linear-gradient(135deg, rgba(239, 246, 255, 0.8) 0%, rgba(219, 234, 254, 0.8) 100%);
+    }
+    
+    .ribbon {
+      position: absolute;
+      top: -8px;
+      right: 20px;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      padding: 0.4rem 1.2rem;
+      border-radius: 2rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(245, 87, 108, 0.4);
+      z-index: 10;
+    }
+    
     /* Responsive */
     @media (max-width: 768px) {
       .stat-number {
@@ -218,6 +290,11 @@
       }
       .timeline-dot {
         left: -1.75rem;
+      }
+      .ribbon {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.8rem;
+        right: 10px;
       }
     }
   </style>
