@@ -117,6 +117,29 @@
         0 8px 16px rgba(0, 0, 0, 0.1);
     }
     
+    /* Premium Card */
+    .premium-card {
+      background: white;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+      position: relative;
+    }
+    
+    .premium-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(37, 99, 235, 0.2);
+    }
+    
+    /* Hover Lift Effect */
+    .hover-lift {
+      transition: all 0.3s ease;
+    }
+    
+    .hover-lift:hover {
+      transform: translateY(-8px);
+    }
+    
     /* Stat Cards with 3D Effect */
     .stat-card {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -198,6 +221,7 @@
       overflow: hidden;
       border: none;
       cursor: pointer;
+      text-decoration: none;
     }
     
     .btn-premium::before {
@@ -223,56 +247,24 @@
       box-shadow: 0 20px 50px rgba(37, 99, 235, 0.6);
     }
     
-    /* Education Card with Core Subjects */
-    .education-card {
+    .btn-secondary {
       background: white;
-      border-radius: 1.5rem;
-      padding: 2rem;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-      border-left: 5px solid var(--primary);
-      transition: all 0.4s ease;
-      position: relative;
-    }
-    
-    .education-card:hover {
-      transform: translateX(10px);
-      box-shadow: 0 12px 40px rgba(37, 99, 235, 0.2);
-    }
-    
-    .subjects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 0.75rem;
-      margin-top: 1.5rem;
-      padding: 1.5rem;
-      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-      border-radius: 1rem;
-      border: 2px dashed var(--primary);
-    }
-    
-    .subject-tag {
-      background: white;
-      padding: 0.6rem 1rem;
-      border-radius: 0.75rem;
-      font-size: 0.9rem;
-      font-weight: 600;
       color: var(--primary);
-      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
-      transition: all 0.3s ease;
-      display: flex;
+      padding: 0.8rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      display: inline-flex;
       align-items: center;
       gap: 0.5rem;
+      transition: all 0.3s ease;
+      border: 2px solid var(--primary);
+      text-decoration: none;
     }
     
-    .subject-tag:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
-      background: linear-gradient(135deg, var(--primary), var(--purple));
+    .btn-secondary:hover {
+      background: var(--primary);
       color: white;
-    }
-    
-    .subject-tag i {
-      font-size: 0.8rem;
+      transform: translateY(-3px);
     }
     
     /* Skill Tags with Gradient */
@@ -295,27 +287,6 @@
       transform: translateY(-5px) scale(1.1);
       box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
       background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-    }
-    
-    /* Featured Badge */
-    .featured-badge {
-      position: absolute;
-      top: -12px;
-      right: 20px;
-      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      color: white;
-      padding: 0.5rem 1.2rem;
-      border-radius: 9999px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      box-shadow: 0 4px 15px rgba(245, 87, 108, 0.5);
-      animation: pulse 2s ease-in-out infinite;
-      z-index: 10;
-    }
-    
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.08); }
     }
     
     /* Timeline */
@@ -343,6 +314,7 @@
     .timeline-dot {
       position: absolute;
       left: -2.6rem;
+      top: 0.5rem;
       width: 1.2rem;
       height: 1.2rem;
       background: linear-gradient(135deg, var(--primary), var(--purple));
@@ -429,7 +401,6 @@
       .stat-icon { font-size: 2.5rem; }
       .timeline { padding-left: 2rem; }
       .timeline-dot { left: -1.9rem; }
-      .subjects-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -483,7 +454,7 @@
           <div class="stat-icon">
             <i class="fas fa-project-diagram"></i>
           </div>
-          <div class="stat-number" data-target="8">0</div>
+          <div class="stat-number" data-target="7">0</div>
           <div class="stat-label">Projects</div>
         </div>
         <div class="stat-card text-center">
@@ -497,8 +468,8 @@
           <div class="stat-icon">
             <i class="fas fa-briefcase"></i>
           </div>
-          <div class="stat-number" data-target="5">0</div>
-          <div class="stat-label">Years Experience</div>
+          <div class="stat-number" data-target="6">0</div>
+          <div class="stat-label">Experiences</div>
         </div>
         <div class="stat-card text-center">
           <div class="stat-icon">
@@ -674,7 +645,7 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- JavaScript - ONLY ONE SCRIPT TAG -->
   <script src="portfolio.js"></script>
 
 </body>
