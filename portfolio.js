@@ -1,4 +1,4 @@
-// Portfolio.js - Ultra-Premium Version with Core Subjects
+// Ultra-Premium Portfolio.js - Complete & Optimized
 document.addEventListener('DOMContentLoaded', () => {
 
     // ======================================
@@ -10,9 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Bachelor's in Economics",
             institution: "Bacha Khan University Charsadda",
             date: "2021-2025",
-            grade: "CGPA 3.5/4.00",
-            description: "Thesis: 'Impact of Climate Change on Agriculture Production of Khyber Pakhtunkhwa'",
-            thesis_link: "https://drive.google.com/file/d/1harwAm6_QGf-JVitg50jyX_ZOWtbXg1k/view?usp=sharing",
+            description: "CGPA 3.5/4.00. Thesis: 'Impact of Climate Change on Agriculture Production of Khyber Pakhtunkhwa'. <a href='https://drive.google.com/file/d/1harwAm6_QGf-JVitg50jyX_ZOWtbXg1k/view?usp=sharing' target='_blank' class='text-blue-600 hover:text-blue-800 text-sm font-medium'>View Thesis →</a>",
             subjects: [
                 "Microeconomics & Macroeconomics",
                 "Econometrics & Statistical Analysis",
@@ -32,154 +30,158 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Diploma in Information Technology",
             institution: "Government Technical and Vocation Center Umarzai",
             date: "2023-2024",
-            grade: "Grade A (761/1000)",
-            description: "Comprehensive IT training covering modern technologies",
+            description: "Final Grade: 761/1000 (A).",
             subjects: [
-                "Computer Fundamentals",
-                "Programming Basics",
+                "Programming Fundamentals",
                 "Database Management",
                 "Web Development",
-                "Microsoft Office Suite",
-                "Networking Fundamentals"
+                "Computer Networks",
+                "Operating Systems"
             ]
         },
         {
-            title: "Intermediate in Pre-Engineering",
-            institution: "Government Degree College Achni Payan, Peshawar",
-            date: "2019-2021",
-            description: "Science foundation with focus on analytical thinking",
-            subjects: [
-                "Mathematics",
-                "Physics",
-                "Chemistry",
-                "English",
-                "Computer Science"
-            ]
-        },
-        {
-            title: "Short Courses - Data for Sustainable Development & Climate Change",
-            institution: "UNDP & ECI (Empowerment through Creative Integration)",
+            title: "Short Courses of Data for Sustainable Development & Climate Change",
+            institution: "UNDP & ECI (Empowerment & thru Creative Integration)",
             date: "November 2024 - December 2024",
-            description: "Specialized training in sustainable development and climate policy",
+            description: "City: Islamabad, Country: Pakistan.",
             subjects: [
-                "Data for SDGs",
-                "Climate Change Analysis",
-                "Policy Development",
-                "Sustainable Development Goals"
+                "Data Analysis for Development",
+                "Climate Change Mitigation",
+                "Sustainable Development Goals",
+                "Policy Research Methods"
+            ]
+        },
+        {
+            title: "Flood First Responders (Emergency Service Society)",
+            institution: "Bacha Khan University Charsadda",
+            date: "March 2022 - Current",
+            description: "City: Charsadda, Country: Pakistan.",
+            subjects: [
+                "Emergency Response",
+                "Disaster Management",
+                "First Aid & Safety",
+                "Community Coordination"
             ]
         },
         {
             title: "Sustainable Development Goals (SDGs) Training Program",
             institution: "UNDP with collaboration with Bacha Khan University",
             date: "Ongoing",
-            description: "Comprehensive SDGs framework and implementation strategies",
+            description: "City: Charsadda, Country: Pakistan.",
             subjects: [
-                "SDG Framework",
-                "Goal Implementation",
+                "SDG Framework & Implementation",
+                "Policy Integration",
                 "Monitoring & Evaluation",
-                "Policy Integration"
+                "Stakeholder Engagement"
             ]
         }
     ];
 
     const experiences = [
         {
-            title: "Summer Intern",
+            title: "Summer-Intern",
             company: "State Bank of Pakistan",
             date: "June 2025 - August 2025",
-            location: "Peshawar, Pakistan",
             description: "Worked alongside economists and HR strategists at SBP during a six-week internship focused on hiring systems, team structures, and institutional workflows. Contributed to discussions on talent acquisition and public-sector performance, gaining early exposure to how national policy is shaped from the inside."
         },
         {
             title: "Intern - Economic Research and Policy Analysis",
             company: "ISPR (Ministry of Pakistan)",
             date: "January 2025 - February 2025",
-            location: "Peshawar, Pakistan",
             description: "Led an econometric analysis of national budgets for defense and welfare spending, identifying PKR 2.5M in potential annual savings. Presented findings to senior officials, which were adopted by the Ministry and influenced KP's 2025 welfare budget decisions."
         },
         {
             title: "Facilitator & Mentor",
             company: "Bacha Khan University Charsadda",
-            date: "July 29-31, 2024",
-            location: "Charsadda, Pakistan",
-            description: "Facilitated the International Conference on Breakthroughs in Pakistan's Economic Development Through Technological Innovation in Agriculture. Coordinated sessions, supported speakers and panelists, and mentored student volunteers."
+            date: "July 29–31, 2024",
+            description: "Facilitated the International Conference on Breakthroughs in Pakistan's Economic Development Through Technological Innovation in Agriculture. Coordinated sessions, supported speakers and panelists in real time, and ensured a smooth, professional experience across all three days."
         },
         {
             title: "Research Assistant",
             company: "Bacha Khan University Research Project",
             date: "December 2023 - April 2024",
-            location: "Charsadda, Pakistan",
             description: "Assisted on a flood mitigation research project, reviewing datasets, conducting analysis, and supporting background research. Used Stata, R, and Tableau to clean data, run analysis, and create visuals for local officials."
         },
         {
-            title: "Intern - Data Analyst",
+            title: "Intern-Development and Project Management",
+            company: "Building Control Authority (BCA), TMA Karak",
+            date: "June 2023 - August 2023",
+            description: "Conducted detailed cost and benefit analyses for new building projects within the Karak Area Development Project. Tracked project progress to ensure construction stayed on schedule and aligned with plans, guiding resource allocation."
+        },
+        {
+            title: "Intern-Data Analyst",
             company: "Wilayat Khan Wazir Construction Company",
             date: "January 2022 - July 2022",
-            location: "Peshawar, Pakistan",
             description: "Analyzed commuter travel patterns in Peshawar using Stata and redesigned bus schedules to cut operating costs by 15% and reduce delays by 20%, improving daily commutes."
         }
     ];
 
     const skills = [
-        { name: "STATA", icon: "fa-chart-line" },
-        { name: "R Programming", icon: "fa-code" },
-        { name: "SPSS", icon: "fa-chart-bar" },
-        { name: "EViews", icon: "fa-chart-area" },
-        { name: "Power BI", icon: "fa-chart-pie" },
-        { name: "Python", icon: "fa-python" },
-        { name: "Tableau", icon: "fa-table" },
-        { name: "SQL", icon: "fa-database" },
-        { name: "GitHub", icon: "fa-github" },
-        { name: "Excel", icon: "fa-file-excel" },
-        { name: "Econometric Modeling", icon: "fa-calculator" },
-        { name: "Project Management", icon: "fa-tasks" },
-        { name: "Critical Thinking", icon: "fa-brain" },
-        { name: "Team Collaboration", icon: "fa-users" }
+        "Statistical and econometric software (STATA, SPSS, EViews, R)",
+        "Power BI",
+        "Python Language - Basic knowledge",
+        "Microsoft Office (Outlook, Excel, Word, PowerPoint)",
+        "GitHub",
+        "Data Visualization (Tableau - Good Standing)",
+        "Econometric modeling",
+        "Survey design and analysis (Basics in SAS)",
+        "Strategic Decision Making",
+        "Written and verbal skills",
+        "Project management",
+        "Team Collaboration and Motivation",
+        "Critical thinking",
+        "Organizational and planning skills"
     ];
 
     const projects = [
         {
-            title: "🌍 Climate & Economic Risk Tool",
-            description: "Interactive Streamlit app analyzing climate risks and economic impacts across regions with real-time data visualization.",
-            link: "https://climate-app-owais.streamlit.app/",
-            tags: ["Python", "Streamlit", "Climate Analysis"],
-            featured: true
-        },
-        {
             title: "Pakistan SDGs Indicators Dashboard",
             description: "Tracks national progress on Sustainable Development Goals using UN and government data.",
+            demo: "https://econ-owais.github.io/Pakistan_SDGS-indicator-s-Dashboard/",
             link: "https://econ-owaisali.shinyapps.io/Pakistan-SDGs-Indicators-Dashboard/",
-            tags: ["R/Shiny", "SDGs", "Data Viz"]
+            tags: ["Data Visualization", "R/Shiny", "Sustainable Development"]
         },
         {
-            title: "KPK Flood Impact Infographic",
+            title: "KPK Flood Impact Infographic (Charsadda)",
             description: "Visualizes flood-affected zones to inform infrastructure planning and academic research.",
+            demo: "https://econ-owais.github.io/KPK-Flood-Impact-Infographic-/",
             link: "https://econ-owaisali.shinyapps.io/kpk_flood_dashboard/",
-            tags: ["R/Shiny", "GIS", "Climate"]
+            tags: ["Data Visualization", "R/Shiny", "GIS"]
         },
         {
             title: "Healthy Diet Affordability Dashboard",
             description: "Analyzes cost and accessibility of nutritious diets across Pakistan using FAO food price data.",
+            demo: "https://econ-owais.github.io/Healthy-Diet-Affordability-Dashboard/",
             link: "https://econ-owaisali.shinyapps.io/Healthy-Diet-Dashboard/",
-            tags: ["R/Shiny", "Public Health"]
+            tags: ["Data Analysis", "R/Shiny", "Public Health"]
+        },
+        {
+            title: "Pakistan Development Indicators Dashboard",
+            description: "Socio-economic trends brought to life with interactive filters and branded design.",
+            demo: "https://econ-owais.github.io/pakistan-indicators-dashboard./",
+            link: "https://econ-owaisali.shinyapps.io/irrigation_project/",
+            tags: ["Data Visualization", "Policy Research"]
         },
         {
             title: "Pakistan Macro Indicators Dashboard",
             description: "Displays inflation, GDP, and trade metrics for economic analysis and decision-making.",
+            demo: "https://econ-owais.github.io/Pakistan-Macro-Indicators-Dashboard/",
             link: "https://econ-owaisali.shinyapps.io/Pakistan-macro-indicator-Dashboard/",
-            tags: ["R/Shiny", "Macroeconomics"]
+            tags: ["Economic Analysis", "Data Visualization", "Macroeconomics"]
         },
         {
             title: "Irrigation Dashboard for Pakistan",
-            description: "Water resource analytics for agricultural planning and climate resilience.",
+            description: "An intricate dashboard offers water resource analytics for agricultural planning and climate resilience.",
+            demo: "https://econ-owaisali.shinyapps.io/irrigation_project/",
             link: "https://econ-owaisali.shinyapps.io/irrigation_project/",
-            tags: ["R/Shiny", "Agriculture"]
+            tags: ["Water Resources", "Agriculture", "Climate Resilience"]
         },
         {
-            title: "Urban Planning Traffic Survey",
-            description: "GIS-based traffic flow model for Charsadda District (2040) analyzing 500+ commuter patterns.",
+            title: "Urban Planning Traffic Survey for District Charsadda (2040)",
+            description: "Co-designed a GIS-based traffic flow model for Charsadda District (2040) by analyzing travel patterns of over 500 commuters. Contributed findings to PEPAC's urban planning report, which was later cited by the KP Government for future development planning.",
             link: "https://mohw.gov.pk/ProjectDetail/Nzk1NGExNWEtYTRkZC00ZTM5LWI2YzAtYTdlYzMwNmQ3NTk5",
-            tags: ["GIS", "Urban Planning"]
+            demo: "#",
+            tags: ["Urban Planning", "GIS", "Traffic Analysis"]
         }
     ];
 
@@ -188,238 +190,251 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "District Facilitator & Team Leader",
             organization: "Alahidamat Foundation, Charsadda",
             date: "June 2023 - Current",
-            description: "Volunteered with Alahidamat Foundation, Charsadda, supporting community development initiatives and emergency relief operations."
+            description: "Volunteered with Alahidamat Foundation, Charsadda, supporting community development initiatives.",
+            link: "#"
         },
         {
             title: "Vice President (District Leadership Role)",
             organization: "Youth Peace & Research Society",
             date: "February 2020 - Current",
-            description: "Led mobilization of 50+ volunteers to deliver emergency relief to 200+ flood-affected families. Secured Rs. 300,000 in donations and implemented WASH programs improving clean water access for 15 villages."
+            description: "Led the mobilization of 50+ volunteers to deliver emergency relief (food, hygiene kits, tents) to 200+ flood-affected families in KP. Secured Rs. 300,000 in donations to support home reconstruction efforts. Collaborated with local NGOs (Edhi Foundation, SRSO) to implement WASH programs, improving clean water access for 15 flood-affected villages.",
+            link: "#"
         },
         {
             title: "Student Education Ambassador",
             organization: "Bacha Khan University",
             date: "January 2022 - Current",
-            description: "Represented university at national seminars, collaborating with students from LUMS, NUST, and GIKI. Led initiatives promoting academic growth and mentorship, impacting 500+ students across KPK."
+            description: "Represented my university at national-level seminars and academic events, collaborating with students and ambassadors from top institutions like LUMS, NUST, and GIKI. Led initiatives to promote academic growth, mentorship, and cross-university engagement, impacting 500+ students across KPK.",
+            link: "#"
         },
         {
             title: "Head Coordinator",
             organization: "Bacha Khan University Charsadda",
             date: "2021-2022",
-            description: "Led and managed volunteer teams to oversee and organize major university events, coordinating multiple large-scale initiatives."
+            description: "Led and managed a team of volunteers to oversee and organize major university events.",
+            link: "#"
         }
     ];
 
     const topCertifications = [
-        { title: "Google Advanced Data Analytics", issuer: "Google", link: "https://coursera.org/verify/professional-cert/U5L3C5HCSDCH" },
+        { title: "Google Advanced Data Analytics", issuer: "Coursera", link: "https://coursera.org/verify/professional-cert/U5L3C5HCSDCH" },
         { title: "Google Project Management", issuer: "Coursera", link: "https://coursera.org/verify/professional-cert/C7WJTPZCWGEK" },
         { title: "Microsoft Power BI Data Analyst", issuer: "Microsoft", link: "https://learn.microsoft.com/api/credentials/share/en-us/OwaisAliShah/7J8MVY69VAL0" },
+        { title: "Statistical Business Analyst", issuer: "SAS", link: "https://www.coursera.org/account/accomplishments/specialization/6TA00Z2AOP6I" },
         { title: "Financial Markets", issuer: "Yale University", link: "https://www.coursera.org/account/accomplishments/verify/WAHXZ0XBUW8H" },
-        { title: "Environmental Economics", issuer: "University of Michigan", link: "https://www.coursera.org/account/accomplishments/verify/9JXM7CR7MTXY" },
-        { title: "Python for Data Science & AI", issuer: "IBM", link: "https://www.credly.com/badges/f64113dc-7511-4709-ac8b-3dd5f91d7a49" }
+        { title: "AI Awakening & Society", issuer: "Stanford University", link: "https://coursera.org/verify/JHE2TKTJ16DL" }
     ];
 
     // ======================================
-    // Populate Functions
+    // Element Creation Functions
     // ======================================
 
-    // Skills
-    const skillsContainer = document.getElementById('skills-container');
-    if (skillsContainer) {
-        skillsContainer.innerHTML = skills.map(skill => `
-            <span class="skill-tag">
-                <i class="fas ${skill.icon}"></i>
-                ${skill.name}
-            </span>
-        `).join('');
-    }
-
-    // Education with Core Subjects
-    const educationContainer = document.getElementById('education-container');
-    if (educationContainer) {
-        educationContainer.innerHTML = education.map(edu => `
-            <div class="education-card">
-                <div class="flex items-start justify-between mb-4">
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">${edu.title}</h3>
-                        <p class="text-lg font-semibold text-blue-600 mb-1">
-                            <i class="fas fa-university mr-2"></i>${edu.institution}
-                        </p>
-                        <p class="text-sm text-gray-500">
-                            <i class="fas fa-calendar mr-2"></i>${edu.date}
-                            ${edu.grade ? `<span class="ml-4"><i class="fas fa-star mr-2"></i>${edu.grade}</span>` : ''}
-                        </p>
-                    </div>
+    const createEducationElement = (edu) => {
+        const div = document.createElement('div');
+        div.className = 'premium-card p-8 hover-lift';
+        div.innerHTML = `
+            <div class="flex items-start gap-4 mb-4">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-graduation-cap text-white text-2xl"></i>
                 </div>
-                <p class="text-gray-700 mb-4">${edu.description}</p>
-                ${edu.thesis_link ? `
-                    <a href="${edu.thesis_link}" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold mb-4">
-                        <i class="fas fa-file-pdf"></i> View Thesis →
-                    </a>
-                ` : ''}
-                ${edu.subjects ? `
-                    <div class="subjects-grid">
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-1">${edu.title}</h3>
+                    <p class="text-blue-600 font-semibold text-lg">${edu.institution}</p>
+                    <p class="text-gray-500 text-sm mt-1"><i class="fas fa-calendar-alt mr-2"></i>${edu.date}</p>
+                </div>
+            </div>
+            <p class="text-gray-700 mb-4 leading-relaxed">${edu.description}</p>
+            ${edu.subjects ? `
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <h4 class="font-bold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-book-open mr-2 text-blue-600"></i>
+                        Core Subjects Studied:
+                    </h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
                         ${edu.subjects.map(subject => `
-                            <div class="subject-tag">
-                                <i class="fas fa-check-circle"></i>
-                                ${subject}
+                            <div class="flex items-center gap-2 text-sm text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 text-xs"></i>
+                                <span>${subject}</span>
                             </div>
                         `).join('')}
                     </div>
-                ` : ''}
-            </div>
-        `).join('');
-    }
-
-    // Experience
-    const experienceContainer = document.getElementById('experience-container');
-    if (experienceContainer) {
-        experienceContainer.innerHTML = experiences.map(exp => `
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="glass-card p-8">
-                    <div class="text-sm font-semibold text-blue-600 mb-2">
-                        <i class="fas fa-calendar-alt mr-2"></i>${exp.date}
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">${exp.title}</h3>
-                    <p class="text-lg font-semibold text-purple-600 mb-1">
-                        <i class="fas fa-building mr-2"></i>${exp.company}
-                    </p>
-                    <p class="text-sm text-gray-500 mb-4">
-                        <i class="fas fa-map-marker-alt mr-2"></i>${exp.location}
-                    </p>
-                    <p class="text-gray-700 leading-relaxed">${exp.description}</p>
                 </div>
-            </div>
-        `).join('');
-    }
-
-    // Projects
-    const projectsContainer = document.getElementById('projects-container');
-    if (projectsContainer) {
-        projectsContainer.innerHTML = projects.map(proj => `
-            <div class="glass-card p-8 relative">
-                ${proj.featured ? '<div class="featured-badge"><i class="fas fa-star mr-2"></i>FEATURED</div>' : ''}
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">${proj.title}</h3>
-                <p class="text-gray-700 mb-6 leading-relaxed">${proj.description}</p>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    ${proj.tags.map(tag => `
-                        <span class="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                            ${tag}
-                        </span>
-                    `).join('')}
-                </div>
-                <a href="${proj.link}" target="_blank" class="btn-premium">
-                    <i class="fas fa-external-link-alt"></i> View Project
-                </a>
-            </div>
-        `).join('');
-    }
-
-    // Leadership
-    const leadershipContainer = document.getElementById('leadership-container');
-    if (leadershipContainer) {
-        leadershipContainer.innerHTML = leadership.map(lead => `
-            <div class="glass-card p-8">
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">${lead.title}</h3>
-                <p class="text-lg font-semibold text-purple-600 mb-1">
-                    <i class="fas fa-users mr-2"></i>${lead.organization}
-                </p>
-                <p class="text-sm text-gray-500 mb-4">
-                    <i class="fas fa-calendar mr-2"></i>${lead.date}
-                </p>
-                <p class="text-gray-700 leading-relaxed">${lead.description}</p>
-            </div>
-        `).join('');
-    }
-
-    // Certifications
-    const certificationsContainer = document.getElementById('certifications-container');
-    if (certificationsContainer) {
-        certificationsContainer.innerHTML = topCertifications.map(cert => `
-            <div class="glass-card p-8">
-                <h4 class="text-xl font-bold text-gray-900 mb-2">${cert.title}</h4>
-                <p class="text-lg font-semibold text-blue-600 mb-4">
-                    <i class="fas fa-award mr-2"></i>${cert.issuer}
-                </p>
-                <a href="${cert.link}" target="_blank" class="btn-premium">
-                    <i class="fas fa-external-link-alt"></i> Verify
-                </a>
-            </div>
-        `).join('');
-    }
-
-    // ======================================
-    // Animated Counter
-    // ======================================
-    const animateCounters = () => {
-        const counters = document.querySelectorAll('.stat-number');
-        counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target'));
-            const duration = 2000;
-            const increment = target / (duration / 16);
-            let current = 0;
-
-            const updateCounter = () => {
-                current += increment;
-                if (current < target) {
-                    counter.textContent = Math.ceil(current);
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    counter.textContent = target;
-                }
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                if (entries[0].isIntersecting) {
-                    updateCounter();
-                    observer.disconnect();
-                }
-            }, { threshold: 0.5 });
-
-            observer.observe(counter);
-        });
+            ` : ''}
+        `;
+        return div;
     };
 
-    animateCounters();
+    const createExperienceElement = (exp) => {
+        const div = document.createElement('div');
+        div.className = 'timeline-item';
+        div.innerHTML = `
+            <div class="timeline-dot"></div>
+            <div class="premium-card p-8 hover-lift">
+                <div class="flex items-start gap-4 mb-3">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-briefcase text-white text-xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">${exp.title}</h3>
+                        <p class="text-blue-600 font-semibold">${exp.company}</p>
+                        <p class="text-gray-500 text-sm mt-1"><i class="fas fa-calendar mr-2"></i>${exp.date}</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed">${exp.description}</p>
+            </div>
+        `;
+        return div;
+    };
+
+    const createSkillElement = (skill) => {
+        const span = document.createElement('span');
+        span.className = 'skill-tag';
+        span.innerHTML = `<i class="fas fa-check-circle mr-2"></i>${skill}`;
+        return span;
+    };
+
+    const createProjectElement = (proj) => {
+        const div = document.createElement('div');
+        div.className = 'premium-card p-6 hover-lift relative';
+        const tags = proj.tags.map(tag =>
+            `<span class="inline-block bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">${tag}</span>`
+        ).join('');
+        div.innerHTML = `
+            <div class="flex items-start gap-3 mb-3">
+                <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-chart-line text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 flex-1">${proj.title}</h3>
+            </div>
+            <p class="text-gray-700 mb-4">${proj.description}</p>
+            <div class="flex flex-wrap mb-4">${tags}</div>
+            <div class="flex flex-wrap gap-3">
+                ${proj.demo && proj.demo !== '#' ? `<a href="${proj.demo}" target="_blank" class="btn-premium"><i class="fas fa-eye mr-2"></i>View Demo</a>` : ''}
+                ${proj.link && proj.link !== '#' ? `<a href="${proj.link}" target="_blank" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>Live App</a>` : ''}
+            </div>
+        `;
+        return div;
+    };
+
+    const createCertificationElement = (cert) => {
+        const div = document.createElement('div');
+        div.className = 'premium-card p-6 hover-lift text-center';
+        div.innerHTML = `
+            <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-award text-white text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">${cert.title}</h3>
+            <p class="text-blue-600 font-semibold mb-3">${cert.issuer}</p>
+            ${cert.link && cert.link !== '#' ? `<a href="${cert.link}" target="_blank" class="text-sm text-blue-600 hover:text-blue-800 font-medium"><i class="fas fa-check-circle mr-1"></i>Verify Credential →</a>` : ''}
+        `;
+        return div;
+    };
+
+    const createLeadershipElement = (lead) => {
+        const div = document.createElement('div');
+        div.className = 'premium-card p-8 hover-lift';
+        div.innerHTML = `
+            <div class="flex items-start gap-4 mb-3">
+                <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-users text-white text-xl"></i>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">${lead.title}</h3>
+                    <p class="text-blue-600 font-semibold">${lead.organization}</p>
+                    <p class="text-gray-500 text-sm mt-1"><i class="fas fa-calendar mr-2"></i>${lead.date}</p>
+                </div>
+            </div>
+            <p class="text-gray-700 leading-relaxed">${lead.description}</p>
+        `;
+        return div;
+    };
 
     // ======================================
-    // Scroll Animations
+    // Populate Sections
     // ======================================
-    const observeElements = () => {
+
+    const populateSection = (data, containerId, createElementFunction) => {
+        const container = document.getElementById(containerId);
+        if (container) {
+            container.innerHTML = '';
+            data.forEach(item => {
+                container.appendChild(createElementFunction(item));
+            });
+        } else {
+            console.warn(`Container #${containerId} not found`);
+        }
+    };
+
+    populateSection(education, 'education-container', createEducationElement);
+    populateSection(experiences, 'experience-container', createExperienceElement);
+    populateSection(skills, 'skills-container', createSkillElement);
+    populateSection(projects, 'projects-container', createProjectElement);
+    populateSection(topCertifications, 'certifications-container', createCertificationElement);
+    populateSection(leadership, 'leadership-container', createLeadershipElement);
+
+    // ======================================
+    // Animated Counters (FIXED!)
+    // ======================================
+    
+    const animateCounter = (element, target, duration = 2000) => {
+        let start = 0;
+        const increment = target / (duration / 16);
+        const timer = setInterval(() => {
+            start += increment;
+            if (start >= target) {
+                element.textContent = target;
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(start);
+            }
+        }, 16);
+    };
+
+    // Trigger counters when section is visible
+    const observeStats = () => {
+        const statsSection = document.getElementById('stats');
+        if (!statsSection) return;
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    document.querySelectorAll('.stat-number').forEach(el => {
+                        const target = parseInt(el.getAttribute('data-target'));
+                        animateCounter(el, target);
+                    });
+                    observer.disconnect();
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.5 });
 
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        observer.observe(statsSection);
     };
 
-    observeElements();
+    observeStats();
 
     // ======================================
     // Back to Top Button
     // ======================================
-    const backToTop = document.getElementById('backToTop');
     
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 500) {
-            backToTop.classList.add('show');
-        } else {
-            backToTop.classList.remove('show');
-        }
-    });
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
 
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     // ======================================
-    // Smooth Scroll
+    // Smooth Scroll for Links
     // ======================================
+    
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -430,5 +445,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    console.log('✨ Ultra-Premium Portfolio Loaded Successfully!');
+    console.log('✅ Ultra-Premium Portfolio Loaded Successfully!');
 });
