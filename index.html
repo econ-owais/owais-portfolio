@@ -10,15 +10,10 @@
   <meta name="keywords" content="Data Scientist, Economist, Data Analytics, Policy Research, Econometrics, Pakistan, Portfolio">
   <meta name="author" content="Owais Ali Shah">
   
-  <!-- Open Graph -->
-  <meta property="og:title" content="Owais Ali Shah — Data Scientist & Economist">
-  <meta property="og:description" content="Economics graduate specializing in data analytics and policy research">
-  <meta property="og:type" content="website">
-  
-  <!-- Google Fonts - Preload for speed -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -27,156 +22,303 @@
   <script src="https://cdn.tailwindcss.com"></script>
   
   <style>
-    /* Ultra-Premium Styles - Optimized for Speed */
+    /* Ultra-Premium Styles */
     :root {
       --primary: #2563EB;
       --secondary: #1D4ED8;
       --accent: #3B82F6;
+      --purple: #8B5CF6;
+      --pink: #EC4899;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
     
     body {
       font-family: 'Inter', sans-serif;
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
     
     h1, h2, h3, h4 {
       font-family: 'Poppins', sans-serif;
     }
     
-    /* Premium Gradient Background */
+    /* Animated Gradient Background */
     .hero-gradient {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #4facfe);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
       position: relative;
       overflow: hidden;
     }
     
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    /* Floating Particles */
     .hero-gradient::before {
       content: '';
       position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-      background-size: 50px 50px;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle at 40% 20%, rgba(255,255,255,0.15) 2px, transparent 2px);
+      background-size: 50px 50px, 80px 80px, 100px 100px;
       animation: float 20s linear infinite;
     }
     
     @keyframes float {
       0% { transform: translate(0, 0); }
-      100% { transform: translate(50px, 50px); }
+      100% { transform: translate(100px, 100px); }
     }
     
-    /* Premium Card Styles */
-    .premium-card {
+    /* Premium Glass Card */
+    .glass-card {
       background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-radius: 1rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      border: 1px solid rgba(37, 99, 235, 0.1);
+      backdrop-filter: blur(20px);
+      border-radius: 1.5rem;
+      box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 2px 8px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
     }
     
-    .premium-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
     }
     
-    /* Stats Counter Animation */
+    .glass-card:hover::before {
+      left: 100%;
+    }
+    
+    .glass-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 
+        0 20px 60px rgba(37, 99, 235, 0.3),
+        0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Stat Cards with 3D Effect */
+    .stat-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+    }
+    
+    .stat-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: rotate 10s linear infinite;
+    }
+    
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-15px) rotateX(5deg);
+      box-shadow: 0 20px 60px rgba(102, 126, 234, 0.6);
+    }
+    
+    .stat-icon {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+      animation: bounce 2s ease-in-out infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
     .stat-number {
-      font-size: 3rem;
+      font-size: 4rem;
       font-weight: 800;
-      color: var(--primary);
       line-height: 1;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+      position: relative;
+      z-index: 2;
     }
     
-    /* Featured Project Badge */
+    .stat-label {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.95;
+      font-weight: 600;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Premium Buttons */
+    .btn-premium {
+      background: linear-gradient(135deg, var(--primary), var(--purple));
+      color: white;
+      padding: 1.2rem 3rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
+      position: relative;
+      overflow: hidden;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn-premium::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    
+    .btn-premium:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+    
+    .btn-premium:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 20px 50px rgba(37, 99, 235, 0.6);
+    }
+    
+    /* Education Card with Core Subjects */
+    .education-card {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      border-left: 5px solid var(--primary);
+      transition: all 0.4s ease;
+      position: relative;
+    }
+    
+    .education-card:hover {
+      transform: translateX(10px);
+      box-shadow: 0 12px 40px rgba(37, 99, 235, 0.2);
+    }
+    
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border-radius: 1rem;
+      border: 2px dashed var(--primary);
+    }
+    
+    .subject-tag {
+      background: white;
+      padding: 0.6rem 1rem;
+      border-radius: 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary);
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .subject-tag:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+      background: linear-gradient(135deg, var(--primary), var(--purple));
+      color: white;
+    }
+    
+    .subject-tag i {
+      font-size: 0.8rem;
+    }
+    
+    /* Skill Tags with Gradient */
+    .skill-tag {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 9999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0.4rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+    
+    .skill-tag:hover {
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    }
+    
+    /* Featured Badge */
     .featured-badge {
       position: absolute;
-      top: -10px;
-      right: -10px;
+      top: -12px;
+      right: 20px;
       background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
       color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 2rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: 9999px;
       font-size: 0.75rem;
       font-weight: 700;
-      box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+      box-shadow: 0 4px 15px rgba(245, 87, 108, 0.5);
       animation: pulse 2s ease-in-out infinite;
+      z-index: 10;
     }
     
     @keyframes pulse {
       0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
+      50% { transform: scale(1.08); }
     }
     
-    /* Premium Button */
-    .btn-premium {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 9999px;
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
-    }
-    
-    .btn-premium:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px rgba(37, 99, 235, 0.4);
-    }
-    
-    /* Back to Top Button */
-    .back-to-top {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      width: 50px;
-      height: 50px;
-      background: var(--primary);
-      color: white;
-      border-radius: 50%;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
-      transition: all 0.3s ease;
-      z-index: 1000;
-    }
-    
-    .back-to-top.show {
-      display: flex;
-    }
-    
-    .back-to-top:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6);
-    }
-    
-    /* Skill Tags */
-    .skill-tag {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 9999px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      display: inline-block;
-      margin: 0.25rem;
-      transition: all 0.3s ease;
-    }
-    
-    .skill-tag:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-    }
-    
-    /* Timeline Styles */
+    /* Timeline */
     .timeline {
       position: relative;
       padding-left: 3rem;
@@ -188,41 +330,110 @@
       left: 0.5rem;
       top: 0;
       bottom: 0;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--primary), var(--accent));
+      width: 3px;
+      background: linear-gradient(to bottom, var(--primary), var(--purple), var(--pink));
+      border-radius: 9999px;
     }
     
     .timeline-item {
       position: relative;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
     
     .timeline-dot {
       position: absolute;
-      left: -2.5rem;
-      width: 1rem;
-      height: 1rem;
-      background: var(--primary);
+      left: -2.6rem;
+      width: 1.2rem;
+      height: 1.2rem;
+      background: linear-gradient(135deg, var(--primary), var(--purple));
       border-radius: 50%;
-      border: 3px solid white;
-      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+      border: 4px solid white;
+      box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.2);
+      animation: dotPulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes dotPulse {
+      0%, 100% { box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.2); }
+      50% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.1); }
+    }
+    
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary), var(--purple));
+      color: white;
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+      transition: all 0.4s ease;
+      z-index: 1000;
+      border: none;
+    }
+    
+    .back-to-top.show {
+      display: flex;
+    }
+    
+    .back-to-top:hover {
+      transform: translateY(-8px) scale(1.1);
+      box-shadow: 0 15px 40px rgba(37, 99, 235, 0.7);
+    }
+    
+    /* Section Title Animation */
+    .section-title {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--purple), var(--pink));
+      border-radius: 9999px;
+      animation: underlineGrow 2s ease-in-out infinite;
+    }
+    
+    @keyframes underlineGrow {
+      0%, 100% { width: 100px; }
+      50% { width: 150px; }
+    }
+    
+    /* Fade In Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     
     /* Responsive */
     @media (max-width: 768px) {
-      .stat-number {
-        font-size: 2rem;
-      }
-      .timeline {
-        padding-left: 2rem;
-      }
-      .timeline-dot {
-        left: -1.75rem;
-      }
+      .stat-number { font-size: 2.5rem; }
+      .stat-icon { font-size: 2.5rem; }
+      .timeline { padding-left: 2rem; }
+      .timeline-dot { left: -1.9rem; }
+      .subjects-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gradient-to-br from-gray-50 to-blue-50">
 
   <!-- Back to Top Button -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
@@ -231,26 +442,30 @@
 
   <!-- Hero Section -->
   <header class="hero-gradient min-h-screen flex items-center justify-center text-center text-white px-4">
-    <div class="relative z-10 space-y-8 animate-fade-in">
-      <div class="inline-block bg-white bg-opacity-20 backdrop-blur-sm px-6 py-2 rounded-full text-sm font-semibold mb-4">
-        <span class="inline-block w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+    <div class="relative z-10 space-y-8 max-w-4xl mx-auto">
+      <div class="inline-block bg-white bg-opacity-20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-semibold mb-4 animate-pulse">
+        <span class="inline-block w-3 h-3 bg-green-400 rounded-full mr-2"></span>
         Available for Opportunities
       </div>
-      <h1 class="text-5xl sm:text-7xl font-extrabold mb-4">Owais Ali Shah</h1>
-      <p class="text-2xl sm:text-3xl font-medium mb-2">Economics Graduate | Data Analyst | Policy Researcher</p>
-      <p class="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight">
+        Owais Ali Shah
+      </h1>
+      <p class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">
+        Economics Graduate | Data Analyst | Policy Researcher
+      </p>
+      <p class="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto mb-10 leading-relaxed">
         Transforming data into actionable insights for policy and economic development
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
         <a href="#projects" class="btn-premium">
-          <i class="fas fa-folder-open"></i> View My Work
+          <i class="fas fa-rocket"></i> View My Work
         </a>
-        <a href="#contact" class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all">
-          <i class="fas fa-envelope mr-2"></i> Contact Me
+        <a href="#contact" class="bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all flex items-center justify-center gap-2">
+          <i class="fas fa-envelope"></i> Contact Me
         </a>
       </div>
-      <div class="mt-12 animate-bounce">
-        <a href="#stats" class="text-white text-3xl">
+      <div class="mt-16 animate-bounce">
+        <a href="#stats" class="text-white text-4xl">
           <i class="fas fa-chevron-down"></i>
         </a>
       </div>
@@ -258,131 +473,147 @@
   </header>
 
   <!-- Statistics Section -->
-  <section id="stats" class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
-    <div class="container mx-auto px-4 max-w-6xl">
-      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Achievements at a Glance</h2>
+  <section id="stats" class="py-24 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
+        <span class="section-title">Achievements at a Glance</span>
+      </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="premium-card p-8 text-center">
-          <i class="fas fa-project-diagram text-5xl text-blue-600 mb-4"></i>
+        <div class="stat-card text-center">
+          <div class="stat-icon">
+            <i class="fas fa-project-diagram"></i>
+          </div>
           <div class="stat-number" data-target="8">0</div>
-          <div class="text-gray-600 font-semibold mt-2">Projects Completed</div>
+          <div class="stat-label">Projects</div>
         </div>
-        <div class="premium-card p-8 text-center">
-          <i class="fas fa-certificate text-5xl text-purple-600 mb-4"></i>
+        <div class="stat-card text-center">
+          <div class="stat-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
           <div class="stat-number" data-target="150">0</div>
-          <div class="text-gray-600 font-semibold mt-2">Certifications</div>
+          <div class="stat-label">Certifications</div>
         </div>
-        <div class="premium-card p-8 text-center">
-          <i class="fas fa-briefcase text-5xl text-green-600 mb-4"></i>
+        <div class="stat-card text-center">
+          <div class="stat-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
           <div class="stat-number" data-target="5">0</div>
-          <div class="text-gray-600 font-semibold mt-2">Years Experience</div>
+          <div class="stat-label">Years Experience</div>
         </div>
-        <div class="premium-card p-8 text-center">
-          <i class="fas fa-file-alt text-5xl text-red-600 mb-4"></i>
+        <div class="stat-card text-center">
+          <div class="stat-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
           <div class="stat-number" data-target="3">0</div>
-          <div class="text-gray-600 font-semibold mt-2">Research Papers</div>
+          <div class="stat-label">Research Papers</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-20 bg-white">
-    <div class="container mx-auto px-4 max-w-4xl">
-      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">About Me</h2>
-      <div class="premium-card p-8 text-center space-y-6 text-lg text-gray-700 leading-relaxed">
+  <section id="about" class="py-24 bg-white">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
+        <span class="section-title">About Me</span>
+      </h2>
+      <div class="glass-card p-10 text-center space-y-6 text-lg text-gray-700 leading-relaxed">
         <p>I chose economics because I wanted to understand how systems work — how decisions ripple through communities, how policies shape lives, and how data can tell stories that matter. It wasn't just theory for me; I wanted to use it to fix things, build smarter tools, and make public services actually serve.</p>
         <p>Along the way, I picked up tech skills that helped me turn ideas into action. With R, Stata, and Shiny, I started building dashboards, mapping flood risks, and analyzing budgets for central banks and government teams. I've worked on everything from welfare planning to transport systems — always focused on clarity, impact, and real-world use.</p>
-        <p>I care about making things simple, sharp, and accessible. Whether it's a policy report or a public-facing app, I push every detail until it works for everyone. Outside the data world, I've led student teams, mentored others, and helped communities during floods. For me, it's all connected — economics, tech, design, and outreach.</p>
-        <p class="font-bold text-blue-600">This is more than a career. It's how I build things that matter.</p>
+        <p class="font-bold text-2xl text-blue-600">This is more than a career. It's how I build things that matter.</p>
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="py-20 bg-gray-50">
+  <section id="skills" class="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
     <div class="container mx-auto px-4 max-w-6xl">
-      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Technical Skills</h2>
-      <div class="flex flex-wrap justify-center gap-3">
-        <span class="skill-tag"><i class="fas fa-chart-line mr-2"></i>Statistical Software (STATA, R, SPSS, EViews)</span>
-        <span class="skill-tag"><i class="fas fa-chart-bar mr-2"></i>Power BI</span>
-        <span class="skill-tag"><i class="fab fa-python mr-2"></i>Python</span>
-        <span class="skill-tag"><i class="fas fa-chart-pie mr-2"></i>Tableau</span>
-        <span class="skill-tag"><i class="fas fa-calculator mr-2"></i>Econometric Modeling</span>
-        <span class="skill-tag"><i class="fas fa-tasks mr-2"></i>Project Management</span>
-        <span class="skill-tag"><i class="fas fa-database mr-2"></i>SQL</span>
-        <span class="skill-tag"><i class="fab fa-github mr-2"></i>GitHub</span>
-        <span class="skill-tag"><i class="fas fa-brain mr-2"></i>Critical Thinking</span>
-        <span class="skill-tag"><i class="fas fa-users mr-2"></i>Team Collaboration</span>
-        <span class="skill-tag"><i class="fas fa-pen mr-2"></i>Written Communication</span>
-        <span class="skill-tag"><i class="fas fa-lightbulb mr-2"></i>Strategic Decision Making</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="py-20 bg-white">
-    <div class="container mx-auto px-4 max-w-5xl">
-      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Professional Experience</h2>
-      <div class="timeline" id="experience-container">
+      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
+        <span class="section-title">Technical Skills</span>
+      </h2>
+      <div class="flex flex-wrap justify-center" id="skills-container">
         <!-- Populated by JavaScript -->
       </div>
     </div>
   </section>
 
   <!-- Education Section -->
-  <section id="education" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-4 max-w-5xl">
-      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Education</h2>
-      <div class="space-y-6" id="education-container">
+  <section id="education" class="py-24 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
+        <span class="section-title">Education</span>
+      </h2>
+      <div class="space-y-8 fade-in" id="education-container">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-24 bg-gradient-to-br from-gray-50 to-purple-50">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
+        <span class="section-title">Professional Experience</span>
+      </h2>
+      <div class="timeline fade-in" id="experience-container">
         <!-- Populated by JavaScript -->
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-white">
-    <div class="container mx-auto px-4 max-w-6xl">
-      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Featured Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+  <section id="projects" class="py-24 bg-white">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
+        <span class="section-title">Featured Projects</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in" id="projects-container">
         <!-- Populated by JavaScript -->
       </div>
     </div>
   </section>
 
   <!-- Publications Section -->
-  <section id="publications" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-4 max-w-5xl">
-      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Publications & Research</h2>
-      <div class="space-y-6">
-        <div class="premium-card p-8">
-          <div class="inline-block bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full text-sm font-semibold mb-4">Under Review</div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Inflation and Economic Growth in Pakistan, 2010–2024</h3>
-          <p class="text-gray-600 mb-4">Threshold Evidence and Policy Implications</p>
-          <p class="text-sm text-gray-500 mb-4">Submitted to peer-reviewed journal</p>
-          <a href="https://drive.google.com/file/d/1wMOiKw71_BioehZu_S1HItQviAyvdMOA/view?usp=sharing" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">
-            <i class="fas fa-file-pdf mr-2"></i>View Paper →
+  <section id="publications" class="py-24 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
+        <span class="section-title">Publications & Research</span>
+      </h2>
+      <div class="space-y-8 fade-in">
+        <div class="glass-card p-10">
+          <div class="inline-block bg-yellow-400 text-yellow-900 px-5 py-2 rounded-full text-sm font-bold mb-6">
+            <i class="fas fa-clock mr-2"></i>Under Review
+          </div>
+          <h3 class="text-3xl font-bold text-gray-900 mb-3">Inflation and Economic Growth in Pakistan, 2010–2024</h3>
+          <p class="text-xl text-gray-600 mb-4">Threshold Evidence and Policy Implications</p>
+          <p class="text-sm text-gray-500 mb-6">Submitted to peer-reviewed journal</p>
+          <a href="https://drive.google.com/file/d/1wMOiKw71_BioehZu_S1HItQviAyvdMOA/view?usp=sharing" target="_blank" class="btn-premium">
+            <i class="fas fa-file-pdf"></i>View Paper
           </a>
         </div>
-        <div class="premium-card p-8">
-          <div class="inline-block bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full text-sm font-semibold mb-4">Under Review</div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Impact of Population Growth on Health and Education in Pakistan</h3>
-          <p class="text-sm text-gray-500 mb-4">Submitted to peer-reviewed journal</p>
-          <a href="https://drive.google.com/file/d/1Mfd1FTtzxE8euHJfZHW6prOEXLg-bRRH/view?usp=drive_link" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">
-            <i class="fas fa-file-pdf mr-2"></i>View Paper →
+        <div class="glass-card p-10">
+          <div class="inline-block bg-yellow-400 text-yellow-900 px-5 py-2 rounded-full text-sm font-bold mb-6">
+            <i class="fas fa-clock mr-2"></i>Under Review
+          </div>
+          <h3 class="text-3xl font-bold text-gray-900 mb-3">Impact of Population Growth on Health and Education in Pakistan</h3>
+          <p class="text-sm text-gray-500 mb-6">Submitted to peer-reviewed journal</p>
+          <a href="https://drive.google.com/file/d/1Mfd1FTtzxE8euHJfZHW6prOEXLg-bRRH/view?usp=drive_link" target="_blank" class="btn-premium">
+            <i class="fas fa-file-pdf"></i>View Paper
           </a>
         </div>
-        <div class="premium-card p-8">
-          <div class="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm font-semibold mb-4">Published</div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">17th South Asian Economics Student's Meet</h3>
-          <p class="text-gray-600 mb-4">Impact of Energy Crises on Pakistan's Economy</p>
-          <p class="text-sm text-gray-500 mb-4">Bacha Khan University, December 2021</p>
-          <div class="flex gap-4">
-            <a href="https://drive.google.com/file/d/1lCS8Jkk9-S5z87zFHiBaZeFHDHin9bne/view?usp=drive_link" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">
-              <i class="fas fa-file-pdf mr-2"></i>View Paper →
+        <div class="glass-card p-10">
+          <div class="inline-block bg-green-400 text-green-900 px-5 py-2 rounded-full text-sm font-bold mb-6">
+            <i class="fas fa-check-circle mr-2"></i>Published
+          </div>
+          <h3 class="text-3xl font-bold text-gray-900 mb-3">17th South Asian Economics Student's Meet</h3>
+          <p class="text-xl text-gray-600 mb-4">Impact of Energy Crises on Pakistan's Economy</p>
+          <p class="text-sm text-gray-500 mb-6">Bacha Khan University, December 2021</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://drive.google.com/file/d/1lCS8Jkk9-S5z87zFHiBaZeFHDHin9bne/view?usp=drive_link" target="_blank" class="btn-premium">
+              <i class="fas fa-file-pdf"></i>View Paper
             </a>
-            <a href="https://econ-owais.github.io/SAESM-Research-paper/" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">
-              <i class="fas fa-external-link-alt mr-2"></i>View Demo →
+            <a href="https://econ-owais.github.io/SAESM-Research-paper/" target="_blank" class="btn-premium">
+              <i class="fas fa-external-link-alt"></i>View Demo
             </a>
           </div>
         </div>
@@ -391,25 +622,29 @@
   </section>
 
   <!-- Leadership Section -->
-  <section id="leadership" class="py-20 bg-white">
-    <div class="container mx-auto px-4 max-w-5xl">
-      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Leadership & Volunteering</h2>
-      <div class="space-y-6" id="leadership-container">
+  <section id="leadership" class="py-24 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
+        <span class="section-title">Leadership & Volunteering</span>
+      </h2>
+      <div class="space-y-8 fade-in" id="leadership-container">
         <!-- Populated by JavaScript -->
       </div>
     </div>
   </section>
 
   <!-- Certifications Section -->
-  <section id="certifications" class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
-    <div class="container mx-auto px-4 max-w-6xl">
-      <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">Certifications</h2>
-      <p class="text-center text-gray-600 mb-12 text-lg">Showcasing top certifications from leading institutions</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="certifications-container">
+  <section id="certifications" class="py-24 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <h2 class="text-5xl font-extrabold text-center mb-6 text-gray-900">
+        <span class="section-title">Certifications</span>
+      </h2>
+      <p class="text-center text-gray-600 mb-16 text-xl">Showcasing top certifications from leading institutions</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in" id="certifications-container">
         <!-- Populated by JavaScript -->
       </div>
-      <div class="text-center mt-12">
-        <a href="certifications.html" class="btn-premium">
+      <div class="text-center mt-16">
+        <a href="certifications.html" class="btn-premium text-xl">
           <i class="fas fa-award"></i> View All 150+ Certifications
         </a>
       </div>
@@ -417,24 +652,24 @@
   </section>
 
   <!-- Contact Section -->
-  <footer id="contact" class="py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
-    <div class="container mx-auto px-4 max-w-4xl text-center">
-      <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
-      <p class="text-xl mb-12 text-gray-200">Let's discuss data, economics, or policy research</p>
-      <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-        <a href="mailto:owais.ali.shah.econ@gmail.com" class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all inline-flex items-center justify-center gap-2">
-          <i class="fas fa-envelope"></i> Email Me
+  <footer id="contact" class="py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white">
+    <div class="container mx-auto px-4 max-w-5xl text-center">
+      <h2 class="text-5xl font-extrabold mb-6">Get in Touch</h2>
+      <p class="text-2xl mb-16 text-gray-100">Let's discuss data, economics, or policy research</p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+        <a href="mailto:owais.ali.shah.econ@gmail.com" class="bg-white text-blue-600 px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-100 transition-all inline-flex items-center justify-center gap-3">
+          <i class="fas fa-envelope text-2xl"></i> Email Me
         </a>
-        <a href="https://linkedin.com/in/owaisali-econ" target="_blank" class="bg-white bg-opacity-20 backdrop-blur-sm px-8 py-4 rounded-full font-bold hover:bg-opacity-30 transition-all inline-flex items-center justify-center gap-2">
-          <i class="fab fa-linkedin"></i> LinkedIn
+        <a href="https://linkedin.com/in/owaisali-econ" target="_blank" class="bg-white bg-opacity-20 backdrop-blur-sm px-10 py-5 rounded-full font-bold text-lg hover:bg-opacity-30 transition-all inline-flex items-center justify-center gap-3">
+          <i class="fab fa-linkedin text-2xl"></i> LinkedIn
         </a>
-        <a href="https://github.com/econ-owais" target="_blank" class="bg-white bg-opacity-20 backdrop-blur-sm px-8 py-4 rounded-full font-bold hover:bg-opacity-30 transition-all inline-flex items-center justify-center gap-2">
-          <i class="fab fa-github"></i> GitHub
+        <a href="https://github.com/econ-owais" target="_blank" class="bg-white bg-opacity-20 backdrop-blur-sm px-10 py-5 rounded-full font-bold text-lg hover:bg-opacity-30 transition-all inline-flex items-center justify-center gap-3">
+          <i class="fab fa-github text-2xl"></i> GitHub
         </a>
       </div>
-      <div class="border-t border-white border-opacity-20 pt-8">
-        <p class="text-gray-200">&copy; 2025 Owais Ali Shah. All rights reserved.</p>
-        <p class="text-gray-300 mt-2">Built with passion for data and policy research</p>
+      <div class="border-t border-white border-opacity-20 pt-10">
+        <p class="text-gray-200 text-lg">&copy; 2025 Owais Ali Shah. All rights reserved.</p>
+        <p class="text-gray-300 mt-3">Built with passion for data and policy research</p>
       </div>
     </div>
   </footer>
