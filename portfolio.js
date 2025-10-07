@@ -77,19 +77,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // ONLY INTERNSHIPS - Filtered and ordered by most recent first
-const experiences = [
+    const experiences = [
     {
         title: "Summer-Intern",
         company: "State Bank of Pakistan",
         date: "June 2025 - August 2025",
-        description: "Worked alongside economists and HR strategists at SBP during a six-week internship focused on hiring systems, team structures, and institutional workflows."
+        description: "Worked alongside economists and HR strategists at SBP during a six-week internship focused on hiring systems, team structures, and institutional workflows. Contributed to discussions on talent acquisition and public-sector performance."
     },
     {
         title: "Intern - Economic Research and Policy Analysis",
         company: "ISPR (Ministry of Pakistan)",
         date: "January 2025 - February 2025",
         description: "Led an econometric analysis of national budgets for defense and welfare spending, identifying PKR 2.5M in potential annual savings. Presented findings to senior officials."
+    },
+    {
+        title: "Facilitator & Mentor",
+        company: "Bacha Khan University Charsadda",
+        date: "July 29–31, 2024",
+        description: "Facilitated the International Conference on Breakthroughs in Pakistan's Economic Development Through Technological Innovation in Agriculture."
     },
     {
         title: "Research Assistant",
