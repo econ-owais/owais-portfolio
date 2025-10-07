@@ -26,627 +26,378 @@
     :root {
       --primary: #2563EB;
       --secondary: #1D4ED8;
-      --accent: #3B82F6;
-      --purple: #8B5CF6;
-      --pink: #EC4899;
+      --bg: #FFFFFF;
+      --bg-gray: #F9FAFB;
+      --text: #1F2937;
+      --text-light: #6B7280;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+
+    /* Dark Mode Support (Optional but recommended for modern design) */
+    html[data-theme='dark'] {
+      --primary: #6366F1;
+      --secondary: #4F46E5;
+      --bg: #111827;
+      --bg-gray: #1F2937;
+      --text: #F9FAFB;
+      --text-light: #9CA3AF;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.7);
     }
     
     body {
       font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
-      overflow-x: hidden;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background-color 0.3s, color 0.3s;
     }
-    
-    h1, h2, h3, h4 {
+
+    .section-title {
       font-family: 'Poppins', sans-serif;
+      color: var(--primary);
     }
-    
-    /* Animated Gradient Background */
-    .hero-gradient {
-      background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #4facfe);
-      background-size: 400% 400%;
-      animation: gradientShift 15s ease infinite;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    
-    /* Floating Particles */
-    .hero-gradient::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: 
-        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 1px, transparent 1px),
-        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 1px, transparent 1px),
-        radial-gradient(circle at 40% 20%, rgba(255,255,255,0.15) 2px, transparent 2px);
-      background-size: 50px 50px, 80px 80px, 100px 100px;
-      animation: float 20s linear infinite;
-    }
-    
-    @keyframes float {
-      0% { transform: translate(0, 0); }
-      100% { transform: translate(100px, 100px); }
-    }
-    
-    /* Premium Glass Card */
-    .glass-card {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px);
-      border-radius: 1.5rem;
-      box-shadow: 
-        0 8px 32px rgba(0, 0, 0, 0.1),
-        0 2px 8px rgba(0, 0, 0, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .glass-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transition: left 0.5s;
-    }
-    
-    .glass-card:hover::before {
-      left: 100%;
-    }
-    
-    .glass-card:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow: 
-        0 20px 60px rgba(37, 99, 235, 0.3),
-        0 8px 16px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Premium Card */
+
     .premium-card {
-      background: white;
+      background-color: var(--bg);
       border-radius: 1.5rem;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-      transition: all 0.4s ease;
-      position: relative;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease-in-out;
+      border: 1px solid rgba(0, 0, 0, 0.05);
     }
-    
-    .premium-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(37, 99, 235, 0.2);
+
+    html[data-theme='dark'] .premium-card {
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
-    /* Hover Lift Effect */
-    .hover-lift {
-      transition: all 0.3s ease;
-    }
-    
+
     .hover-lift:hover {
-      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-5px);
     }
-    
-    /* Stat Cards with 3D Effect */
-    .stat-card {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      border-radius: 1.5rem;
-      padding: 2.5rem;
-      color: white;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.4s ease;
-      box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
-    }
-    
-    .stat-card::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-      animation: rotate 10s linear infinite;
-    }
-    
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-    
-    .stat-card:hover {
-      transform: translateY(-15px) rotateX(5deg);
-      box-shadow: 0 20px 60px rgba(102, 126, 234, 0.6);
-    }
-    
-    .stat-icon {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
-      animation: bounce 2s ease-in-out infinite;
-    }
-    
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    
-    .stat-number {
-      font-size: 4rem;
-      font-weight: 800;
-      line-height: 1;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-      position: relative;
-      z-index: 2;
-    }
-    
-    .stat-label {
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      opacity: 0.95;
-      font-weight: 600;
-      position: relative;
-      z-index: 2;
-    }
-    
-    /* Premium Buttons */
+
     .btn-premium {
-      background: linear-gradient(135deg, var(--primary), var(--purple));
-      color: white;
-      padding: 1.2rem 3rem;
-      border-radius: 9999px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.7rem;
-      transition: all 0.4s ease;
-      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
-      position: relative;
-      overflow: hidden;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    
-    .btn-premium::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.3);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-    
-    .btn-premium:hover::before {
-      width: 300px;
-      height: 300px;
-    }
-    
-    .btn-premium:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 20px 50px rgba(37, 99, 235, 0.6);
+      @apply inline-flex items-center px-6 py-3 border border-transparent text-sm font-bold rounded-full shadow-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200;
     }
     
     .btn-secondary {
-      background: white;
-      color: var(--primary);
-      padding: 0.8rem 1.5rem;
-      border-radius: 9999px;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: all 0.3s ease;
-      border: 2px solid var(--primary);
-      text-decoration: none;
+      @apply inline-flex items-center px-6 py-3 border border-blue-600 text-sm font-bold rounded-full text-blue-600 bg-white hover:bg-blue-50 transition-colors duration-200;
     }
     
-    .btn-secondary:hover {
-      background: var(--primary);
-      color: white;
-      transform: translateY(-3px);
-    }
-    
-    /* Skill Tags with Gradient */
-    .skill-tag {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 9999px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin: 0.4rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-    }
-    
-    .skill-tag:hover {
-      transform: translateY(-5px) scale(1.1);
-      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
-      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-    }
-    
-    /* Timeline */
+    /* Timeline styles for Experience Section */
     .timeline {
       position: relative;
-      padding-left: 3rem;
+      padding: 0 0 0 20px;
     }
     
     .timeline::before {
       content: '';
       position: absolute;
-      left: 0.5rem;
       top: 0;
-      bottom: 0;
-      width: 3px;
-      background: linear-gradient(to bottom, var(--primary), var(--purple), var(--pink));
-      border-radius: 9999px;
+      left: 8px;
+      width: 4px;
+      height: 100%;
+      background: #E5E7EB; /* light gray line */
+      border-radius: 2px;
+    }
+    
+    html[data-theme='dark'] .timeline::before {
+      background: #374151;
     }
     
     .timeline-item {
       position: relative;
-      margin-bottom: 3rem;
+      padding-bottom: 2rem;
     }
     
     .timeline-dot {
       position: absolute;
-      left: -2.6rem;
-      top: 0.5rem;
-      width: 1.2rem;
-      height: 1.2rem;
-      background: linear-gradient(135deg, var(--primary), var(--purple));
+      top: 24px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background: var(--bg);
+      border: 4px solid var(--primary);
       border-radius: 50%;
-      border: 4px solid white;
-      box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.2);
-      animation: dotPulse 2s ease-in-out infinite;
+      z-index: 10;
     }
-    
-    @keyframes dotPulse {
-      0%, 100% { box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.2); }
-      50% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.1); }
+
+    .timeline-item:last-child {
+        padding-bottom: 0;
     }
-    
+
+    /* Skill Tag Styling */
+    .skill-tag {
+      @apply inline-flex items-center px-4 py-2 text-sm font-medium rounded-full bg-blue-50 text-blue-700 transition-all duration-200;
+      border: 1px solid var(--primary);
+    }
+    html[data-theme='dark'] .skill-tag {
+        @apply bg-blue-900 border-blue-700 text-blue-300;
+    }
+
     /* Back to Top Button */
-    .back-to-top {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(135deg, var(--primary), var(--purple));
-      color: white;
-      border-radius: 50%;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      cursor: pointer;
-      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
-      transition: all 0.4s ease;
-      z-index: 1000;
-      border: none;
+    #backToTop {
+        @apply fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 z-50 opacity-0 pointer-events-none;
+    }
+    #backToTop.show {
+        @apply opacity-100 pointer-events-auto;
     }
     
-    .back-to-top.show {
-      display: flex;
-    }
-    
-    .back-to-top:hover {
-      transform: translateY(-8px) scale(1.1);
-      box-shadow: 0 15px 40px rgba(37, 99, 235, 0.7);
-    }
-    
-    /* Section Title Animation */
-    .section-title {
-      position: relative;
-      display: inline-block;
-    }
-    
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-      height: 4px;
-      background: linear-gradient(90deg, var(--primary), var(--purple), var(--pink));
-      border-radius: 9999px;
-      animation: underlineGrow 2s ease-in-out infinite;
-    }
-    
-    @keyframes underlineGrow {
-      0%, 100% { width: 100px; }
-      50% { width: 150px; }
-    }
-    
-    /* Fade In Animation */
+    /* Animation for section entry */
     .fade-in {
       opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
-    
-    .fade-in.visible {
+    .fade-in.is-visible {
       opacity: 1;
       transform: translateY(0);
     }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .stat-number { font-size: 2.5rem; }
-      .stat-icon { font-size: 2.5rem; }
-      .timeline { padding-left: 2rem; }
-      .timeline-dot { left: -1.9rem; }
-    }
+
   </style>
+
+  <!-- Load script later to ensure DOM is ready -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <script>
+    // Theme Switcher Logic (runs before portfolio.js)
+    document.addEventListener('DOMContentLoaded', () => {
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        }
+    });
+
+    // Intersection Observer for fade-in effect
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-blue-50">
+<body class="antialiased">
 
-  <!-- Back to Top Button -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <!-- Hero Section -->
-  <header class="hero-gradient min-h-screen flex items-center justify-center text-center text-white px-4">
-    <div class="relative z-10 space-y-8 max-w-4xl mx-auto">
-      <div class="inline-block bg-white bg-opacity-20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-semibold mb-4 animate-pulse">
-        <span class="inline-block w-3 h-3 bg-green-400 rounded-full mr-2"></span>
-        Available for Opportunities
-      </div>
-      <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight">
-        Owais Ali Shah
+  <!-- ======================================= -->
+  <!-- Navigation Header -->
+  <!-- ======================================= -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-sm shadow-md transition-all duration-300">
+    <div class="container flex justify-between items-center py-4">
+      <h1 class="text-2xl font-extrabold text-gray-900 flex items-center">
+        <span class="text-blue-600 mr-2">OAS</span> Portfolio
       </h1>
-      <p class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">
-        Economics Graduate | Data Analyst | Policy Researcher
-      </p>
-      <p class="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto mb-10 leading-relaxed">
-        Transforming data into actionable insights for policy and economic development
-      </p>
-      <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href="#projects" class="btn-premium">
-          <i class="fas fa-rocket"></i> View My Work
-        </a>
-        <a href="#contact" class="bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all flex items-center justify-center gap-2">
-          <i class="fas fa-envelope"></i> Contact Me
-        </a>
-      </div>
-      <div class="mt-16 animate-bounce">
-        <a href="#stats" class="text-white text-4xl">
-          <i class="fas fa-chevron-down"></i>
-        </a>
-      </div>
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+        <a href="#education" class="text-gray-600 hover:text-blue-600 transition-colors">Education</a>
+        <a href="#experience" class="text-gray-600 hover:text-blue-600 transition-colors">Experience</a>
+        <a href="#skills" class="text-gray-600 hover:text-blue-600 transition-colors">Skills</a>
+        <a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
+        <a href="#certifications" class="text-gray-600 hover:text-blue-600 transition-colors">Certifications</a>
+        <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+      </nav>
+      <button id="themeToggle" class="w-10 h-10 rounded-full bg-gray-100 text-gray-800 flex items-center justify-center hover:bg-gray-200 transition-colors">
+        <i id="themeIcon" class="fas fa-sun"></i>
+      </button>
     </div>
   </header>
 
-  <!-- Statistics Section -->
-  <section id="stats" class="py-24 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
-    <div class="container mx-auto px-4 max-w-7xl">
-      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
-        <span class="section-title">Achievements at a Glance</span>
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="stat-card text-center">
-          <div class="stat-icon">
-            <i class="fas fa-project-diagram"></i>
-          </div>
-          <div class="stat-number" data-target="7">0</div>
-          <div class="stat-label">Projects</div>
+  <main>
+    
+    <!-- ======================================= -->
+    <!-- Hero Section -->
+    <!-- ======================================= -->
+    <section id="about" class="section bg-gray">
+      <div class="container text-center py-20">
+        <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center shadow-xl">
+          <i class="fas fa-user-tie text-white text-4xl"></i>
         </div>
-        <div class="stat-card text-center">
-          <div class="stat-icon">
-            <i class="fas fa-certificate"></i>
-          </div>
-          <div class="stat-number" data-target="150">0</div>
-          <div class="stat-label">Certifications</div>
-        </div>
-        <div class="stat-card text-center">
-          <div class="stat-icon">
-            <i class="fas fa-briefcase"></i>
-          </div>
-          <div class="stat-number" data-target="6">0</div>
-          <div class="stat-label">Experiences</div>
-        </div>
-        <div class="stat-card text-center">
-          <div class="stat-icon">
-            <i class="fas fa-file-alt"></i>
-          </div>
-          <div class="stat-number" data-target="3">0</div>
-          <div class="stat-label">Research Papers</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-24 bg-white">
-    <div class="container mx-auto px-4 max-w-5xl">
-      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
-        <span class="section-title">About Me</span>
-      </h2>
-      <div class="glass-card p-10 text-center space-y-6 text-lg text-gray-700 leading-relaxed">
-        <p>I chose economics because I wanted to understand how systems work — how decisions ripple through communities, how policies shape lives, and how data can tell stories that matter. It wasn't just theory for me; I wanted to use it to fix things, build smarter tools, and make public services actually serve.</p>
-        <p>Along the way, I picked up tech skills that helped me turn ideas into action. With R, Stata, and Shiny, I started building dashboards, mapping flood risks, and analyzing budgets for central banks and government teams. I've worked on everything from welfare planning to transport systems — always focused on clarity, impact, and real-world use.</p>
-        <p class="font-bold text-2xl text-blue-600">This is more than a career. It's how I build things that matter.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
-    <div class="container mx-auto px-4 max-w-6xl">
-      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
-        <span class="section-title">Technical Skills</span>
-      </h2>
-      <div class="flex flex-wrap justify-center" id="skills-container">
-        <!-- Populated by JavaScript -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section id="education" class="py-24 bg-white">
-    <div class="container mx-auto px-4 max-w-6xl">
-      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
-        <span class="section-title">Education</span>
-      </h2>
-      <div class="space-y-8 fade-in" id="education-container">
-        <!-- Populated by JavaScript -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="py-24 bg-gradient-to-br from-gray-50 to-purple-50">
-    <div class="container mx-auto px-4 max-w-6xl">
-      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
-        <span class="section-title">Professional Experience</span>
-      </h2>
-      <div class="timeline fade-in" id="experience-container">
-        <!-- Populated by JavaScript -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="py-24 bg-white">
-    <div class="container mx-auto px-4 max-w-7xl">
-      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
-        <span class="section-title">Featured Projects</span>
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in" id="projects-container">
-        <!-- Populated by JavaScript -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Publications Section -->
-  <section id="publications" class="py-24 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
-    <div class="container mx-auto px-4 max-w-6xl">
-      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
-        <span class="section-title">Publications & Research</span>
-      </h2>
-      <div class="space-y-8 fade-in">
-        <div class="glass-card p-10">
-          <div class="inline-block bg-yellow-400 text-yellow-900 px-5 py-2 rounded-full text-sm font-bold mb-6">
-            <i class="fas fa-clock mr-2"></i>Under Review
-          </div>
-          <h3 class="text-3xl font-bold text-gray-900 mb-3">Inflation and Economic Growth in Pakistan, 2010–2024</h3>
-          <p class="text-xl text-gray-600 mb-4">Threshold Evidence and Policy Implications</p>
-          <p class="text-sm text-gray-500 mb-6">Submitted to peer-reviewed journal</p>
-          <a href="https://drive.google.com/file/d/1wMOiKw71_BioehZu_S1HItQviAyvdMOA/view?usp=sharing" target="_blank" class="btn-premium">
-            <i class="fas fa-file-pdf"></i>View Paper
+        <h2 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4 fade-in">
+          Owais Ali Shah
+        </h2>
+        <p class="text-2xl md:text-3xl font-light text-gray-600 mb-8 fade-in">
+          Data Scientist & Economist | Policy Research & Econometrics
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 fade-in">
+          <a href="#contact" class="btn-premium">
+            <i class="fas fa-handshake mr-2"></i> Hire Me
+          </a>
+          <a href="https://linkedin.com/in/owaisali-econ" target="_blank" class="btn-secondary">
+            <i class="fab fa-linkedin mr-2"></i> LinkedIn
           </a>
         </div>
-        <div class="glass-card p-10">
-          <div class="inline-block bg-yellow-400 text-yellow-900 px-5 py-2 rounded-full text-sm font-bold mb-6">
-            <i class="fas fa-clock mr-2"></i>Under Review
+        <p class="text-md text-gray-500 mt-12 max-w-3xl mx-auto fade-in">
+          Final-year Economics student specializing in data-driven policy analysis and econometric modeling. Experienced in Stata, R/Shiny, and Power BI. Focused on turning complex data into actionable development strategies.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================= -->
+    <!-- Stats Section -->
+    <!-- ======================================= -->
+    <section id="stats" class="section">
+      <div class="container">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center bg-gray p-8 rounded-2xl shadow-inner fade-in">
+          <div class="stat-item">
+            <p class="text-4xl font-extrabold text-blue-600 stat-number" data-target="300">0</p>
+            <p class="text-gray-600 font-medium mt-1">Certifications</p>
           </div>
-          <h3 class="text-3xl font-bold text-gray-900 mb-3">Impact of Population Growth on Health and Education in Pakistan</h3>
-          <p class="text-sm text-gray-500 mb-6">Submitted to peer-reviewed journal</p>
-          <a href="https://drive.google.com/file/d/1Mfd1FTtzxE8euHJfZHW6prOEXLg-bRRH/view?usp=drive_link" target="_blank" class="btn-premium">
-            <i class="fas fa-file-pdf"></i>View Paper
+          <div class="stat-item">
+            <p class="text-4xl font-extrabold text-green-600 stat-number" data-target="10">0</p>
+            <p class="text-gray-600 font-medium mt-1">Research Projects</p>
+          </div>
+          <div class="stat-item">
+            <p class="text-4xl font-extrabold text-yellow-600 stat-number" data-target="4">0</p>
+            <p class="text-gray-600 font-medium mt-1">Internships</p>
+          </div>
+          <div class="stat-item">
+            <p class="text-4xl font-extrabold text-red-600 stat-number" data-target="2">0</p>
+            <p class="text-gray-600 font-medium mt-1">Languages</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================= -->
+    <!-- Education Section -->
+    <!-- ======================================= -->
+    <section id="education" class="section bg-gray">
+      <div class="container">
+        <h2 class="section-title mb-12 fade-in">Academic Journey</h2>
+        <div class="space-y-8 fade-in" id="education-container"> 
+          <!-- Education items will be injected here by portfolio.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================= -->
+    <!-- Experience Section (Internships & Research) -->
+    <!-- ======================================= -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title mb-12 fade-in">Experience & Internships</h2>
+        <div class="timeline fade-in" id="experience-container">
+          <!-- Experience items will be injected here by portfolio.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================= -->
+    <!-- Skills Section -->
+    <!-- ======================================= -->
+    <section id="skills" class="section bg-gray">
+      <div class="container">
+        <h2 class="section-title mb-12 fade-in">Core Competencies</h2>
+        <div class="flex flex-wrap gap-3 justify-center fade-in" id="skills-container">
+          <!-- Skills will be injected here by portfolio.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================= -->
+    <!-- Projects Section -->
+    <!-- ======================================= -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title mb-12 fade-in">Data Dashboards & Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in" id="projects-container">
+          <!-- Projects will be injected here by portfolio.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================= -->
+    <!-- Certifications Section -->
+    <!-- ======================================= -->
+    <section id="certifications" class="section bg-gray">
+      <div class="container">
+        <h2 class="section-title mb-12 fade-in">Top Professional Certifications</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 fade-in" id="certifications-container">
+          <!-- Certifications will be injected here by portfolio.js -->
+        </div>
+        <div class="text-center mt-12 fade-in">
+          <a href="certifications.html" class="btn-premium">
+            <i class="fas fa-list-ul mr-2"></i> View All 300+ Certifications
           </a>
         </div>
-        <div class="glass-card p-10">
-          <div class="inline-block bg-green-400 text-green-900 px-5 py-2 rounded-full text-sm font-bold mb-6">
-            <i class="fas fa-check-circle mr-2"></i>Published
-          </div>
-          <h3 class="text-3xl font-bold text-gray-900 mb-3">17th South Asian Economics Student's Meet</h3>
-          <p class="text-xl text-gray-600 mb-4">Impact of Energy Crises on Pakistan's Economy</p>
-          <p class="text-sm text-gray-500 mb-6">Bacha Khan University, December 2021</p>
-          <div class="flex flex-wrap gap-4">
-            <a href="https://drive.google.com/file/d/1lCS8Jkk9-S5z87zFHiBaZeFHDHin9bne/view?usp=drive_link" target="_blank" class="btn-premium">
-              <i class="fas fa-file-pdf"></i>View Paper
-            </a>
-            <a href="https://econ-owais.github.io/SAESM-Research-paper/" target="_blank" class="btn-premium">
-              <i class="fas fa-external-link-alt"></i>View Demo
-            </a>
-          </div>
+      </div>
+    </section>
+
+    <!-- ======================================= -->
+    <!-- Leadership Section -->
+    <!-- ======================================= -->
+    <section id="leadership" class="section">
+      <div class="container">
+        <h2 class="section-title mb-12 fade-in">Leadership & Volunteering</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in" id="leadership-container">
+          <!-- Leadership items will be injected here by portfolio.js -->
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Leadership Section -->
-  <section id="leadership" class="py-24 bg-white">
-    <div class="container mx-auto px-4 max-w-6xl">
-      <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-900">
-        <span class="section-title">Leadership & Volunteering</span>
-      </h2>
-      <div class="space-y-8 fade-in" id="leadership-container">
-        <!-- Populated by JavaScript -->
+    <!-- ======================================= -->
+    <!-- Contact Section -->
+    <!-- ======================================= -->
+    <section id="contact" class="py-20 bg-blue-600">
+      <div class="container text-center">
+        <h2 class="text-5xl font-extrabold text-white mb-6">Get in Touch</h2>
+        <p class="text-2xl mb-16 text-blue-100">Let's discuss data, economics, or policy research</p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+          <a href="mailto:owais.ali.shah.econ@gmail.com" class="bg-white text-blue-600 px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-100 transition-all inline-flex items-center justify-center gap-3">
+            <i class="fas fa-envelope text-2xl"></i> Email Me
+          </a>
+          <a href="https://linkedin.com/in/owaisali-econ" target="_blank" class="bg-white bg-opacity-20 backdrop-blur-sm px-10 py-5 rounded-full font-bold text-lg hover:bg-opacity-30 transition-all inline-flex items-center justify-center gap-3">
+            <i class="fab fa-linkedin text-2xl"></i> LinkedIn
+          </a>
+          <a href="https://github.com/econ-owais" target="_blank" class="bg-white bg-opacity-20 backdrop-blur-sm px-10 py-5 rounded-full font-bold text-lg hover:bg-opacity-30 transition-all inline-flex items-center justify-center gap-3">
+            <i class="fab fa-github text-2xl"></i> GitHub
+          </a>
+        </div>
+        <div class="border-t border-white border-opacity-30 pt-8 mt-8">
+          <p class="text-sm text-blue-100">&copy; 2025 Owais Ali Shah. All rights reserved.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Certifications Section -->
-  <section id="certifications" class="py-24 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
-    <div class="container mx-auto px-4 max-w-7xl">
-      <h2 class="text-5xl font-extrabold text-center mb-6 text-gray-900">
-        <span class="section-title">Certifications</span>
-      </h2>
-      <p class="text-center text-gray-600 mb-16 text-xl">Showcasing top certifications from leading institutions</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in" id="certifications-container">
-        <!-- Populated by JavaScript -->
-      </div>
-      <div class="text-center mt-16">
-        <a href="certifications.html" class="btn-premium text-xl">
-          <i class="fas fa-award"></i> View All 150+ Certifications
-        </a>
-      </div>
-    </div>
-  </section>
+  </main>
 
-  <!-- Contact Section -->
-  <footer id="contact" class="py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white">
-    <div class="container mx-auto px-4 max-w-5xl text-center">
-      <h2 class="text-5xl font-extrabold mb-6">Get in Touch</h2>
-      <p class="text-2xl mb-16 text-gray-100">Let's discuss data, economics, or policy research</p>
-      <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-        <a href="mailto:owais.ali.shah.econ@gmail.com" class="bg-white text-blue-600 px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-100 transition-all inline-flex items-center justify-center gap-3">
-          <i class="fas fa-envelope text-2xl"></i> Email Me
-        </a>
-        <a href="https://linkedin.com/in/owaisali-econ" target="_blank" class="bg-white bg-opacity-20 backdrop-blur-sm px-10 py-5 rounded-full font-bold text-lg hover:bg-opacity-30 transition-all inline-flex items-center justify-center gap-3">
-          <i class="fab fa-linkedin text-2xl"></i> LinkedIn
-        </a>
-        <a href="https://github.com/econ-owais" target="_blank" class="bg-white bg-opacity-20 backdrop-blur-sm px-10 py-5 rounded-full font-bold text-lg hover:bg-opacity-30 transition-all inline-flex items-center justify-center gap-3">
-          <i class="fab fa-github text-2xl"></i> GitHub
-        </a>
-      </div>
-      <div class="border-t border-white border-opacity-20 pt-10">
-        <p class="text-gray-200 text-lg">&copy; 2025 Owais Ali Shah. All rights reserved.</p>
-        <p class="text-gray-300 mt-3">Built with passion for data and policy research</p>
-      </div>
-    </div>
-  </footer>
+  <button id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <!-- JavaScript - ONLY ONE SCRIPT TAG -->
   <script src="portfolio.js"></script>
-
 </body>
 </html>
