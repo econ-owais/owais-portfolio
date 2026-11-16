@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://econ-owais.github.io/owais-portfolio/sitemap.xml
